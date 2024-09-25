@@ -49,7 +49,7 @@ export const Products = () => {
                     {product.description}
                   </Paragraph>
                 </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
+                <div className="flex gap-1 flex-wrap md:mb-1 mt-2 md:mt-0">
                   {product.stack?.map((stack: string) => (
                     <span
                       key={stack}
