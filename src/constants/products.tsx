@@ -28,8 +28,8 @@ export const products = [
         <p>
         Originally started as an experiment to explore the implementation of AI tools for targeted use cases, 
         the goal was to develop a solution that enhances video discoverability. It utilizes a combination of AI 
-        and machine learning to analyze the video's transcript, along with data from the YouTube API, to create 
-        optimized content tailored to the user's needs.
+        and machine learning to analyze the video&apos;s transcript, along with data from the YouTube API, to create 
+        optimized content tailored to the user&apos;s needs.
           {" "}
         </p>
         <p>
@@ -67,13 +67,13 @@ export const products = [
         <p>
         This internal tool is designed to streamline the thumbnail creation process for our 
         YouTube optimization team, allowing for faster and more efficient production. It leverages specific 
-        templates based on the client's segment, enabling users to pull in images directly from YouTube 
+        templates based on the client&apos;s segment, enabling users to pull in images directly from YouTube 
         or upload them from their computer. 
           {" "}
         </p>
         <p>
         Using a combination of Sharp and Canvas, users can overlay PNG assets and customize various features 
-        of the thumbnail according to the segment's configuration needs. Once finalized, the thumbnail can be 
+        of the thumbnail according to the segment&apos;s configuration needs. Once finalized, the thumbnail can be 
         uploaded directly to the YouTube channel.
         </p>
         <p>
@@ -100,13 +100,13 @@ export const products = [
       <div>
         <p>
         As the lead on the frontend development team, I was responsible for building the international website for the popular 
-        children's show Gabby's Dollhouse. The site was developed using Vue.js for the frontend, integrated with a PHP-based 
+        children&apos;s show Gabby&apos;s Dollhouse. The site was developed using Vue.js for the frontend, integrated with a PHP-based 
         CMS on the backend to dynamically serve content. The vibrant and playful design of the site made the build especially enjoyable. {" "}
         </p>
         <p>
         The website was designed to be fully responsive and optimized to handle high traffic volumes. Performance optimization and intuitive 
         navigation were key priorities, ensuring a seamless experience for users. Additionally, as an international site, we implemented multilingual 
-        support, allowing content to be automatically translated based on the user's language preferences. {" "}
+        support, allowing content to be automatically translated based on the user&apos;s language preferences. {" "}
         </p>{" "}
       </div>
     ),
@@ -132,7 +132,7 @@ export const products = [
         </p>
         <p>
         Built with Next.js, Tailwind CSS, Framer Motion, Drizzle ORM, and MySQL, Oravai is engineered to be both performant and easy to use. 
-        I've been working closely with medical professionals to ensure that the tool aligns with their real-world needs, prioritizing usability 
+        I&apos;ve been working closely with medical professionals to ensure that the tool aligns with their real-world needs, prioritizing usability 
         and functionality. A rewarding part of this process has been designing the user experience from the perspective of someone using it in 
         high-stress situations, where quick access to the right information is critical. Striking a balance between intuitive design and seamless 
         UX has been key to making Oravai a tool that staff will want to use under pressure. {" "}
