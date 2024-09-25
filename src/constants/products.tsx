@@ -1,9 +1,5 @@
-import sidefolioAceternity from "public/images/sidefolio-aceternity-2.png";
 import sidefolioAceternity2 from "public/images/sidefolio-aceternity-2.png";
-import sidefolioAlgochurn from "public/images/sidefolio-algochurn.png";
 import sidefolioAlgochurn2 from "public/images/sidefolio-algochurn.png";
-import sidefolioMoonbeam from "public/images/sidefolio-moonbeam.png";
-import sidefolioMoonbeam2 from "public/images/sidefolio-moonbeam-2.png";
 import sidefolioTailwindMasterKit from "public/images/sidefolio-tailwindmasterkit.png";
 import sidefolioTailwindMasterKit2 from "public/images/sidefolio-tailwindmasterkit-2.png";
 import chapgenhome from "public/images/chap-gen-home.png";
@@ -13,6 +9,8 @@ import gabbysDollhouseHome from "public/images/g-dollhouse-home.png";
 import gabbysDollhouseCharacter from "public/images/g-dollhouse-character.png";
 import oravaiHome from "public/images/oravai-home.png";
 import thumbGenDash from "public/images/thumb-gen-dash.png";
+import thumbGenProduct from "public/images/thumb-gen-product.png";
+import thumbGenCode from "public/images/thumb-gen-code.png";
 
 export const products = [
   {
@@ -47,16 +45,16 @@ export const products = [
     ),
   },
   {
-    href: "https://algochurn.com",
+    href: "https://thumbnail-generator-dev.pxlagency.com/",
     title: "Thumbnail Generator",
     description:
       "Internal tool to help create thumbnails for clients in a more efficient manner.",
     thumbnail: thumbGenDash,
-    images: [sidefolioAlgochurn, sidefolioAlgochurn2],
+    images: [thumbGenProduct, thumbGenCode],
     stack: ["Nextjs", "Tailwindcss", "Framer Motion", "Canvas"],
     client: "PXL Agency",
     clientBlurb: "Made for and with the wonderful team at",
-    slug: "algochurn",
+    slug: "thumbnailgenerator",
     content: (
       <div>
         <p>
@@ -79,7 +77,7 @@ export const products = [
     ),
   },
   {
-    href: "https://gomoonbeam.com",
+    href: "https://www.gabbysdollhouse.com/",
     title: "Gabby's Dollhouse",
     description:
       "International website for the popular children's show Gabby's Dollhouse.",
@@ -88,7 +86,7 @@ export const products = [
     stack: ["Vue.js", "SCSS", "PHP", "MySQL"],
     client: "Dreamworks",
     clientBlurb: "Built with PXL Agency for",
-    slug: "moonbeam",
+    slug: "gabbysdollhouse",
     content: (
       <div>
         <p>
@@ -111,7 +109,7 @@ export const products = [
     ),
   },
   {
-    href: "https://tailwindmasterkit.com",
+    href: "https://oravai-app.vercel.app/",
     title: "Oravai",
     description:
       "Open-source tool to help medical professionals track and prepare preference cards for the operating room.",
@@ -120,7 +118,7 @@ export const products = [
     stack: ["Nextjs", "Tailwindcss", "Framer Motion", "Drizzle ORM", "MySQL"],
     client: "Vail Health",
     clientBlurb: "Built for",
-    slug: "tailwindmasterkit",
+    slug: "oravai",
     content: (
       <div>
         <p>
