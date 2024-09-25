@@ -41,8 +41,8 @@ export const products = [
           {" "}
         </p>
         <p>
-        Building this tool has been a rewarding experience. It’s exciting to see how it empowers creators to grow their channels 
-        while learning more about integrating AI into workflow automation. I’ve gained valuable insights into the power of these models, 
+        Building this tool has been a rewarding experience. It&apos;s exciting to see how it empowers creators to grow their channels 
+        while learning more about integrating AI into workflow automation. I&apos;ve gained valuable insights into the power of these models, 
         particularly around fine-tuning them for even more accurate content generation. There are several plans for future features and 
         enhancements to make the tool even more impactful.
           {" "}
@@ -79,7 +79,7 @@ export const products = [
         <p>
         Built with Next.js, Sharp, Tailwind, and Framer Motion, this tool offers flexibility and responsiveness. 
         Future plans include integrating AI-driven features to suggest thumbnails or generate additional content to 
-        further enhance the tool’s capabilities.
+        further enhance the tool&apos;s capabilities.
         </p>
         {" "}
       </div>
