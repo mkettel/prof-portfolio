@@ -10,6 +10,9 @@ import thumbGenCode from "public/images/thumb-gen-code.png";
 import oravaiDocMobile from "public/images/oravai-doc-mobile.png";
 import oravaiDocCard from "public/images/oravai-doc-card.png";
 import chapGenGen from "public/images/chap-gen-generated.png";
+import djHome from "public/images/dj-home.png";
+import djModal from "public/images/dj-modal.png";
+import djCode from "public/images/dj-code.png";
 
 export const products = [
   {
@@ -137,6 +140,50 @@ export const products = [
         high-stress situations, where quick access to the right information is critical. Striking a balance between intuitive design and seamless 
         UX has been key to making Oravai a tool that staff will want to use under pressure. {" "}
         </p>{" "}
+      </div>
+    ),
+  },
+  {
+    href: "https://dj-one.vercel.app/",
+    title: "DJ Invite",
+    description:
+      "A fun custom party invite I made for a friends' DJ event",
+    thumbnail: djHome,
+    images: [djModal, djCode],
+    stack: ["Nextjs", "Tailwindcss", "Framer Motion", "React Three Fiber" ],
+    client: "Friend",
+    clientBlurb: "Built for a ",
+    slug: "djinvite",
+    content: (
+      <div>
+        <p>
+        One weekend, I decided to challenge myself with a fun project—creating a custom 3D invitation for a friend&apos;s 
+        upcoming DJ event. Inspired by the playful invitations on Partiful, I wanted to capture that same energy 
+        but with a twist: incorporating 3D elements.
+        {" "}
+        </p>
+        <p>
+        The first step was finding a 3D model of a turntable because, let&apos;s be honest, modeling one myself would&apos;ve taken ages! 
+        I found a free one, converted it from GLTF to a React Three Fiber component, and hit the ground running.
+        {" "}
+        </p>
+        <p>
+        The goal was simple: give people a cool spot to RSVP. I built a modal that connected to an email service so I&apos;d get notified when 
+        someone RSVP&apos;d. With the core functionality in place, it was time to crank up the vibe. I added a custom shader for the background, 
+        wrapping the scene in a giant sphere with a neon, color-changing atmosphere, and threw in some camera controls tied to mouse movement 
+        for a bit of interactivity.
+        {" "}
+        </p>
+        <p>
+        Of course, a 3D turntable wouldn&apos;t be complete without music, so I rigged it to play a track from YouTube when the play button was pressed.
+        {" "}
+        </p>
+        <p>
+        While I ran out of time before the event to add everything I envisioned, I was proud of the result and learned a ton in the process. 
+        Next time, I&apos;ll definitely spend more time optimizing the model to improve performance—but hey, that&apos;s what projects like this are all about! {" "}
+        </p>
+        
+        {" "}
       </div>
     ),
   },
