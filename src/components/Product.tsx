@@ -6,13 +6,41 @@ import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { products } from "@/constants/products";
+import { ChevronRight, ChevronLeft } from 'lucide-react';
+
 
 export const SingleProduct = ({ product }: { product: Product }) => {
   const [activeImage, setActiveImage] = useState<StaticImageData | string>(
     product.thumbnail
   );
+  console.log('product', product)
+
+  const getSlugFromId = (id: number) => {
+    // in products find the id that matches the id passed
+    const product = products.find((product) => product.id === id);
+    // return the slug of the product
+    return product?.slug;
+  }
+
+  const nextAndPrevProduct = (direction: string) => {
+    const currentIndex = product.id || 0; 
+    if (direction === 'next') {
+      const nextIndex = currentIndex + 1;
+      const slug = getSlugFromId(nextIndex);
+      return slug;
+    } else {
+      const prevIndex = currentIndex - 1;
+      const slug = getSlugFromId(prevIndex);
+      return slug;
+    }
+  }
+
+  console.log('testing', nextAndPrevProduct('next'))
+
+
   return (
-    <div className="py-10">
+    <div className="">
       <motion.div
         initial={{
           opacity: 0,
@@ -101,6 +129,20 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           <path d="M13 6l6 6"></path>
         </svg>
       </a>
+      <div className="flex justify-between mt-14 w-full">
+        <Link 
+          className="p-2 rounded-full transition-colors duration-200 ease-in-out hover:bg-gray-100" 
+          href={`/projects/${nextAndPrevProduct('prev')}`}
+        >
+          <ChevronLeft className="w-6 h-6 text-gray-600 transition-colors duration-200 ease-in-out group-hover:text-blue-500" />
+        </Link>
+        <Link 
+          className="p-2 rounded-full transition-colors duration-200 ease-in-out hover:bg-gray-100" 
+          href={`/projects/${nextAndPrevProduct('next')}`}
+        >
+          <ChevronRight className="w-6 h-6 text-gray-600 transition-colors duration-200 ease-in-out group-hover:text-blue-500" />
+        </Link>
+      </div>
       
     </div>
   );

@@ -16,6 +16,7 @@ import djCode from "public/images/dj-code.png";
 
 export const products = [
   {
+    id: 1, 
     href: "https://chapter-gen.vercel.app/",
     title: "ChapGen",
     description:
@@ -55,6 +56,7 @@ export const products = [
     ),
   },
   {
+    id: 2, 
     href: "https://thumbnail-generator-dev.pxlagency.com/",
     title: "Thumbnail Generator",
     description:
@@ -89,6 +91,7 @@ export const products = [
     ),
   },
   {
+    id: 3,
     href: "https://www.gabbysdollhouse.com/",
     title: "Gabby's Dollhouse",
     description:
@@ -115,6 +118,7 @@ export const products = [
     ),
   },
   {
+    id: 4,
     href: "https://oravai-app.vercel.app/",
     title: "Oravai",
     description:
@@ -144,6 +148,7 @@ export const products = [
     ),
   },
   {
+    id: 5,
     href: "https://dj-one.vercel.app/",
     title: "DJ Invite",
     description:
