@@ -6,8 +6,8 @@ export const timeline = [
     description: "Building websites, web apps and mobile apps for clients in entertainment to finance",
     responsibilities: [
       "Developed two AI-powered tools that helps optimize YouTube channels for growth",
-      "Handled all front-end code and tasks for an international website build for a a major entertainment client",
-      "Contributed to over 15 differnt projects in the last year",
+      "Handled all front-end code and tasks for an international website build for a major entertainment client",
+      "Contributed to over 15 different projects in the last year",
       "Work with the sales team to help scope out new projects and provide technical expertise",
     ],
   },
@@ -15,12 +15,12 @@ export const timeline = [
     company: "Valico",
     title: "Freelance Full Stack Developer",
     date: "2021 - 2023",
-    description: "Building the future of search",
+    description: "Helping people turn their ideas into reality",
     responsibilities: [
-      "Improved the search algorithm to provide more relevant results",
-      "Developed a new feature that personalizes search results",
-      "Enhanced the search functionality making it more intuitive and user-friendly",
-      "Implemented a feature for tracking search history",
+      "Designed and built websites, web apps, and mobile apps for clients in various industries",
+      "Leveraged website builders such as Webflow, Framer, and Wordpress to help clients get their ideas off the ground quickly, if custom development wasn't needed",
+      "Worked with clients to understand their needs and provide technical expertise",
+      "Built multiple MVPs for startups to help them secure funding, and validate their ideas",
     ],
   },
   {

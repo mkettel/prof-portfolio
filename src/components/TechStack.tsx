@@ -53,6 +53,12 @@ export const TechStack = () => {
 
       className: "h-10 w-10",
     },
+    {
+      title: "Postgres",
+      src: "/images/logos/postgres-elephant.png",
+
+      className: "h-10 w-10",
+    },
   ];
   return (
     <div>

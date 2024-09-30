@@ -1,7 +1,7 @@
 "use client";
 import { Product } from "@/types/products";
 import Image, { StaticImageData } from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
 import Link from "next/link";
@@ -14,6 +14,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
   const [activeImage, setActiveImage] = useState<StaticImageData | string>(
     product.thumbnail
   );
+  const [thumnail, setThumbnail] = useState(null)
   console.log('product', product)
 
   const getSlugFromId = (id: number) => {
@@ -37,6 +38,22 @@ export const SingleProduct = ({ product }: { product: Product }) => {
   }
 
   console.log('testing', nextAndPrevProduct('next'))
+
+  /**
+   * If the other images are clicked then swap the thumbnail image to the other positions
+   * 
+   */
+
+  const handleImageSwap = (image: string) => {
+
+    setActiveImage(image)
+    // setThumbnail(product?.thumbnail)
+
+  }
+
+  useEffect(() => {
+    console.log('active image changed', activeImage)
+  }, [activeImage])
 
 
   return (
