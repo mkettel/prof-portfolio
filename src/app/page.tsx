@@ -1,3 +1,4 @@
+'use client';
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
 import { Highlight } from "@/components/Highlight";
@@ -5,8 +6,17 @@ import { Paragraph } from "@/components/Paragraph";
 import { Products } from "@/components/Products";
 import { TechStack } from "@/components/TechStack";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      console.log('scroll position', window.scrollY)
+    })
+  })
+  // testes
+
   return (
     <Container>
       <span className="text-4xl">👋</span>
