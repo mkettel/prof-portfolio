@@ -15,7 +15,6 @@ export default function Home() {
       console.log('scroll position', window.scrollY)
     })
   })
-  // testes
 
   return (
     <Container>
