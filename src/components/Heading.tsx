@@ -1,7 +1,9 @@
+'use client';
 import React from "react";
 
 import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 // Font files can be colocated inside of `app`
 const CalSans = localFont({
@@ -19,7 +21,10 @@ export const Heading = ({
   as?: keyof JSX.IntrinsicElements;
 }) => {
   return (
-    <Tag
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2 }}
       className={twMerge(
         CalSans.className,
         "text-base md:text-xl lg:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary",
@@ -27,6 +32,6 @@ export const Heading = ({
       )}
     >
       {children}
-    </Tag>
+    </motion.div>
   );
 };

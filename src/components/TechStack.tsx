@@ -59,6 +59,12 @@ export const TechStack = () => {
 
       className: "h-10 w-10",
     },
+    {
+      title: "Webflow",
+      src: "/images/logos/webflow.png",
+
+      className: "h-10 w-10",
+    },
   ];
   return (
     <div>
