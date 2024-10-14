@@ -1,9 +1,11 @@
 'use client';
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Text } from '@react-three/drei'
 
 
 export default function CubeTest() {
+
+  
 
   return (
 
@@ -12,11 +14,17 @@ export default function CubeTest() {
         <OrbitControls />
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <mesh>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="black" />
-        </mesh>
+        <Text
+          position={[0, 0, 0]}
+          fontSize={2.5}
+          color="white"
+          anchorX="center"
+          anchorY="middle"
+        >
+          Contact
+        </Text>
       </Canvas>
+
     
     </>
   )

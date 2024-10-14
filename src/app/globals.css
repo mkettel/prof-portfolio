@@ -2,4 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-butt {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.custom-butt-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
 

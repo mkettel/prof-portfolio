@@ -95,6 +95,21 @@ export default function About() {
           Thank you for stopping by. I hope you enjoy your stay!
         </Paragraph>
       </div>
+      {/* <a className="custom-butt" href="https://www.google.com">
+        <svg
+          width="193"
+          height="78"
+          viewBox="0 0 193 78"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M72.5 1L1 28.5L12.5 62L54.5 76.5L121 68.5L169 76.5L191.5 44.5L182.5 7.5H127L72.5 1Z"
+            fill="#D9D9D9"
+            stroke="black"
+          />
+        </svg>
+      </a> */}
     </div>
   );
 }

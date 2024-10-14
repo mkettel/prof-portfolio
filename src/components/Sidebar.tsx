@@ -12,6 +12,7 @@ import { Badge } from "./Badge";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
@@ -25,7 +26,7 @@ export const Sidebar = () => {
             animate={{ x: 0 }}
             transition={{ duration: 0.2, ease: "linear" }}
             exit={{ x: -200 }}
-            className="px-6  z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
+            className="px-6  z-[100] pt-10 pb-4 bg-neutral-100 dark:bg-zinc-900 duration-300 transition-colors max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
           >
             <div className="flex-1 overflow-auto">
               <SidebarHeader />
@@ -33,6 +34,7 @@ export const Sidebar = () => {
             </div>
             <div onClick={() => isMobile() && setOpen(false)}>
               <Badge href="/resume" text="Read Resume" />
+              <ThemeToggle />
             </div>
           </motion.div>
         )}
@@ -65,7 +67,7 @@ export const Navigation = ({
           onClick={() => isMobile() && setOpen(false)}
           className={twMerge(
             "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
-            isActive(link.href) && "bg-white shadow-lg text-primary"
+            isActive(link.href) && "bg-white shadow-lg dark:shadow-md duration-300 transition-shadow dark:shadow-zinc-200 text-primary"
           )}
         >
           <link.icon
@@ -113,8 +115,8 @@ const SidebarHeader = () => {
         className="object-cover object-top rounded-full flex-shrink-0"
       />
       <div className="flex text-sm flex-col">
-        <p className="font-bold text-primary">Matt Kettelkamp</p>
-        <p className="font-light text-secondary">Developer</p>
+        <p className="font-bold text-primary dark:text-zinc-100 duration-100 transition-colors">Matt Kettelkamp</p>
+        <p className="font-light text-secondary dark:text-zinc-400 duration-100 transition-colors">Developer</p>
       </div>
     </div>
   );
