@@ -26,7 +26,7 @@ export default function Home() {
       <Heading className="font-black dark:text-white">Howdy! I&apos;m Matt</Heading>
       <HeaderParagraph className="max-w-xl mt-4 dark:text-zinc-400">
         I&apos;m a developer that loves{" "}
-        <Highlight className="dark:text-black dark:rounded-sm">building products to random things</Highlight> with the hope that some people find them useful.
+        <Highlight className="dark:text-black dark:rounded-sm">building products and random things</Highlight> with the hope that some people find them useful.
       </HeaderParagraph>
       {/* <Paragraph className="max-w-xl mt-4">
         I have about{" "}
