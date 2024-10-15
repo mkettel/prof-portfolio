@@ -27,7 +27,7 @@ export const Heading = ({
       transition={{ duration: 0.2 }}
       className={twMerge(
         CalSans.className,
-        "text-base md:text-xl lg:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary",
+        "text-base md:text-xl dark:bg-gradient-to-r dark:from-zinc-100 dark:to-zinc-400 lg:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary",
         className
       )}
     >

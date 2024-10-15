@@ -37,18 +37,13 @@ export const SingleProduct = ({ product }: { product: Product }) => {
     }
   }
 
-  console.log('testing', nextAndPrevProduct('next'))
-
   /**
    * If the other images are clicked then swap the thumbnail image to the other positions
    * 
    */
 
   const handleImageSwap = (image: string) => {
-
-    setActiveImage(image)
-    // setThumbnail(product?.thumbnail)
-
+    
   }
 
   useEffect(() => {
@@ -71,7 +66,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           duration: 0.5,
         }}
         key={product.slug}
-        className="relative"
+        className="relative rounded-lg overflow-hidden"
       >
         <Image
           src={activeImage}
@@ -104,7 +99,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           {product.stack?.map((stack: string) => (
             <span
               key={stack}
-              className="text-xs  md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+              className="text-xs dark:text-zinc-400 md:text-xs lg:text-xs bg-gray-50 dark:bg-zinc-800 px-2 py-1 rounded-sm text-secondary"
             >
               {stack}
             </span>
@@ -113,14 +108,14 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       </div>
       
       <div>
-        <Paragraph className="max-w-xl mt-4">{product.description}</Paragraph>
+        <Paragraph className="max-w-xl mt-4 dark:text-zinc-400 ">{product.description}</Paragraph>
       </div>
-      <div className="prose prose-sm md:prose-base max-w-none text-neutral-600">
+      <div className="prose prose-sm md:prose-base max-w-none text-neutral-600 dark:text-zinc-400">
         {product?.content}
       </div>
       <div className="flex border-t-2 border-gray-200 gap-1.5 pt-2 mb-4 items-center justify-start">
-        <Paragraph className="max-w-xl mt-0">{product.clientBlurb}{" "}</Paragraph>
-        <Paragraph className="max-w-xl  mt-0 font-semibold"> {product.client}</Paragraph>
+        <Paragraph className="max-w-xl mt-0 dark:text-zinc-400">{product.clientBlurb}{" "}</Paragraph>
+        <Paragraph className="max-w-xl  mt-0 font-semibold dark:text-zinc-400"> {product.client}</Paragraph>
       </div>
 
       <a
