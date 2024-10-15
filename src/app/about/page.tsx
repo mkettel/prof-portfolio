@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import About from "@/components/About";
 
 export const metadata: Metadata = {
-  title: "About | John Doe",
+  title: "About | Matt Kettelkamp",
   description:
     "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
 };
@@ -24,7 +24,7 @@ export default function AboutPage() {
   ];
   return (
     <Container>
-      <Heading className="font-black">About Me</Heading>
+      <Heading className="font-black dark:text-white">About Me</Heading>
       <About />
     </Container>
   );

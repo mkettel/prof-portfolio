@@ -70,28 +70,28 @@ export default function About() {
       </div>
 
       <div className="max-w-4xl">
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 dark:text-zinc-400">
           Hey there, I&apos;m Matt - a passionate developer, avid skier,
           and a connoisseur of awesome design. Welcome!
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 dark:text-zinc-400">
           Since the early days of my journey, I&apos;ve been captivated by the
           art of crafting exceptional digital experiences. As a developer, I
           thrive on turning lines of code into functional and elegant solutions.
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 dark:text-zinc-400">
           What sets me apart is my unwavering appreciation for learning. No matter
           the topic or task, I approach it with an open mind and a willingness to
           grow. This mindset has exposed me to a wide array of technologies and
           methodologies, allowing me to tackle any challenge with confidence.
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 dark:text-zinc-400">
           Through this website, I aim to share my insights, experiences, and
           creations with you. Whether you&apos;re a fellow developer seeking
           solutions, a fellow adventurer in search of inspiration, or a rando who
           stumbled upon this, there&apos;s something here for you.
         </Paragraph>
-        <Paragraph className=" mt-4">
+        <Paragraph className=" mt-4 dark:text-zinc-400">
           Thank you for stopping by. I hope you enjoy your stay!
         </Paragraph>
       </div>
