@@ -3,27 +3,30 @@ import { Container } from "@/components/Container";
 import { HeaderParagraph } from "@/components/HeaderParagraph";
 import { Heading } from "@/components/Heading";
 import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
 import { Products } from "@/components/Products";
 import { TechStack } from "@/components/TechStack";
-import Image from "next/image";
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      console.log('scroll position', window.scrollY)
-    })
-  })
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <Container>
-      <Heading className="font-black">Howdy! I&apos;m Matt</Heading>
-      <HeaderParagraph className="max-w-xl mt-4">
+      {/* fade gradient that follows the scroll */}
+      <div 
+        className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-100 to-transparent dark:from-zinc-900 pointer-events-none"
+        style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+      />
+      <Heading className="font-black dark:text-white">Howdy! I&apos;m Matt</Heading>
+      <HeaderParagraph className="max-w-xl mt-4 dark:text-zinc-400">
         I&apos;m a developer that loves{" "}
-        <Highlight>building products to random things</Highlight> with the hope that some people find them useful.
+        <Highlight className="dark:text-black dark:rounded-sm">building products to random things</Highlight> with the hope that some people find them useful.
       </HeaderParagraph>
       {/* <Paragraph className="max-w-xl mt-4">
         I have about{" "}
@@ -32,7 +35,7 @@ export default function Home() {
       </Paragraph> */}
       <Heading
         as="h2"
-        className="font-black text-lg md:text-lg lg:text-lg mt-20 mb-4"
+        className="font-black text-lg md:text-lg lg:text-lg mt-20 mb-4 dark:text-white"
       >
         What I&apos;ve been working on
       </Heading>
