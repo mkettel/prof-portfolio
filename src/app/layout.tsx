@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
-          "flex antialiased h-screen overflow-hidden bg-gray-100 dark:bg-gray-900 duration-300 transition-colors"
+          "flex antialiased h-screen overflow-hidden bg-gray-100 dark:bg-zinc-900 duration-300 transition-colors"
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>

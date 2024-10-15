@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Heading } from "./Heading";
 import { twMerge } from "tailwind-merge";
 
@@ -66,6 +66,19 @@ export const TechStack = () => {
       className: "h-10 w-10",
     },
   ];
+
+  // SCROLLING TECH STACK
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   return (
     <div>
       <Heading
@@ -74,7 +87,7 @@ export const TechStack = () => {
       >
         Tech Stack
       </Heading>
-      <div className="flex flex-wrap">
+      <div className="flex gap-4 flex-wrap  ">
         {stack.map((item) => (
           <Image
             src={item.src}

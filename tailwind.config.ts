@@ -22,6 +22,15 @@ const config: Config = {
         primary: "var(--neutral-700)",
         secondary: "var(--neutral-500)",
       },
+      animation: {
+        ticker: 'ticker 40s linear infinite',
+      },
+      keyframes: {
+        ticker: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), addVariablesForColors],
