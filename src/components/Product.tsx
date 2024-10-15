@@ -53,9 +53,21 @@ export const SingleProduct = ({ product }: { product: Product }) => {
     console.log('active image changed', activeImage)
   }, [activeImage])
 
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   return (
     <div className="">
+      <div 
+        className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-100 to-transparent dark:from-zinc-900 pointer-events-none"
+        style={{ transform: `translateY(${scrollY * 0.1}px)` }}
+      />
       <AnimatePresence mode="wait">
         <motion.div
           key={typeof activeImage === 'string' ? activeImage : activeImage.src}
@@ -76,7 +88,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         </motion.div>
       </AnimatePresence>
       <motion.div 
-        className="flex flex-row justify-center my-8 flex-wrap"
+        className="flex flex-row justify-center my-6 md:my-8 flex-wrap"
         layout
       >
         {thumbnails.map((image, idx) => (
@@ -92,15 +104,15 @@ export const SingleProduct = ({ product }: { product: Product }) => {
               alt="product thumbnail"
               height="1000"
               width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
+              className="h-18 w-24 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
             />
           </motion.button>
         ))}
       </motion.div>
       
-      <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
-        <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>
-        <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
+      <div className="flex lg:flex-row justify-between items-center flex-col mt-16 sm:mt-20">
+        <Heading className="font-black mb-0 md:mb-2 pb-1 w-full"> {product.title}</Heading>
+        <div className="flex space-x-2 md:mb-1 mb-2 mt-2 md:mt-0 w-full lg:w-fit">
           {product.stack?.map((stack: string) => (
             <span
               key={stack}
@@ -118,15 +130,10 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       <div className="prose prose-sm md:prose-base max-w-none text-neutral-600 dark:text-zinc-400">
         {product?.content}
       </div>
-      <div className="flex border-t-2 border-gray-200 gap-1.5 pt-2 mb-4 items-center justify-start">
-        <Paragraph className="max-w-xl mt-0 dark:text-zinc-400">{product.clientBlurb}{" "}</Paragraph>
-        <Paragraph className="max-w-xl  mt-0 font-semibold dark:text-zinc-400"> {product.client}</Paragraph>
-      </div>
-
       <a
         href={product.href}
         target="__blank"
-        className="inline-flex items-center gap-1 group/button rounded-full hover:scale-105 focus:outline-none transition ring-offset-gray-900 bg-gray-800 text-white shadow-lg shadow-black/20 sm:backdrop-blur-sm group-hover/button:bg-gray-50/15 group-hover/button:scale-105 focus-visible:ring-1 focus-visible:ring-offset-2 ring-gray-50/60 text-sm font-medium px-4 py-2 mt-auto origin-left"
+        className="inline-flex items-center gap-1 group focus:outline-none transition dark:text-white shadow-black/20 sm:backdrop-blur-sm group-hover/button:bg-gray-50/15 group-hover/button:scale-105 focus-visible:ring-1 focus-visible:ring-offset-2 ring-gray-50/60 text-sm font-medium pt-4 pb-4 mt-auto origin-left"
       >
         Live Preview
         <svg
@@ -139,13 +146,18 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"
+          className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform"
         >
           <path d="M5 12l14 0"></path>
           <path d="M13 18l6 -6"></path>
           <path d="M13 6l6 6"></path>
         </svg>
       </a>
+      <div className="flex border-t-2 border-gray-200 dark:border-gray-800 gap-1.5 pt-2 mb-2 items-center justify-start">
+        <Paragraph className="max-w-xl mt-0 dark:text-zinc-400">{product.clientBlurb}{" "}</Paragraph>
+        <Paragraph className="max-w-xl  mt-0 font-semibold dark:text-zinc-400"> {product.client}</Paragraph>
+      </div>
+
       <div className="flex justify-between mt-14 w-full">
         <Link 
           className="p-2 rounded-full transition-colors duration-200 ease-in-out hover:bg-gray-100" 
