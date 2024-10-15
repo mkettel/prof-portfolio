@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { products } from "@/constants/products";
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 
@@ -14,8 +14,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
   const [activeImage, setActiveImage] = useState<StaticImageData | string>(
     product.thumbnail
   );
-  const [thumnail, setThumbnail] = useState(null)
-  console.log('product', product)
+  const [thumbnails, setThumbnails] = useState<(StaticImageData | string)[]>(product.images);
 
   const getSlugFromId = (id: number) => {
     // in products find the id that matches the id passed
@@ -42,9 +41,13 @@ export const SingleProduct = ({ product }: { product: Product }) => {
    * 
    */
 
-  const handleImageSwap = (image: string) => {
-    
-  }
+  const handleImageSwap = (image: StaticImageData | string) => {
+    setActiveImage(image);
+    setThumbnails(prevThumbnails => {
+      const newThumbnails = prevThumbnails.filter(thumb => thumb !== image); 
+      return [...newThumbnails, activeImage];
+    });
+  };
 
   useEffect(() => {
     console.log('active image changed', activeImage)
@@ -53,35 +56,36 @@ export const SingleProduct = ({ product }: { product: Product }) => {
 
   return (
     <div className="">
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 30,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-        key={product.slug}
-        className="relative rounded-lg overflow-hidden"
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={typeof activeImage === 'string' ? activeImage : activeImage.src}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="relative rounded-lg overflow-hidden"
+        >
+          <Image
+            src={activeImage}
+            alt="thumbnail"
+            height="1000"
+            width="1000"
+            className="rounded-md object-contain"
+          />
+          <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
+        </motion.div>
+      </AnimatePresence>
+      <motion.div 
+        className="flex flex-row justify-center my-8 flex-wrap"
+        layout
       >
-        <Image
-          src={activeImage}
-          alt="thumbnail"
-          height="1000"
-          width="1000"
-          className="rounded-md object-contain"
-        />
-        <div className="absolute bottom-0 bg-white h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
-      </motion.div>
-      <div className="flex flex-row justify-center my-8 flex-wrap">
-        {product.images.map((image, idx) => (
-          <button
-            onClick={() => setActiveImage(image)}
-            key={`image-thumbnail-${idx}`}
+        {thumbnails.map((image, idx) => (
+          <motion.button
+            layout
+            onClick={() => handleImageSwap(image)}
+            key={typeof image === 'string' ? image : image.src}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <Image
               src={image}
@@ -90,9 +94,10 @@ export const SingleProduct = ({ product }: { product: Product }) => {
               width="1000"
               className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100"
             />
-          </button>
+          </motion.button>
         ))}
-      </div>
+      </motion.div>
+      
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
         <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>
         <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
@@ -155,7 +160,6 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           <ChevronRight className="w-6 h-6 text-gray-600 transition-colors duration-200 ease-in-out group-hover:text-blue-500" />
         </Link>
       </div>
-      
     </div>
   );
 };
