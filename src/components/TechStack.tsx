@@ -87,7 +87,7 @@ export const TechStack = () => {
       >
         Tech Stack
       </Heading>
-      <div className="flex gap-4 flex-wrap  ">
+      <div className="flex gap-2 md:gap-4 flex-wrap  ">
         {stack.map((item) => (
           <Image
             src={item.src}
