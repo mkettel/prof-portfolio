@@ -87,7 +87,7 @@ export const TechStack = () => {
       >
         Tech Stack
       </Heading>
-      <div className="flex gap-2 md:gap-4 flex-wrap  ">
+      <div className="flex gap-4 md:gap-8 dark:bg-zinc-300 md:justify-center p-4 dark:items-center dark:rounded-md drop-shadow-lg flex-wrap  ">
         {stack.map((item) => (
           <Image
             src={item.src}
@@ -95,7 +95,7 @@ export const TechStack = () => {
             width={`200`}
             height={`200`}
             alt={item.title}
-            className={twMerge("object-contain mr-4 mb-4", item.className)}
+            className={twMerge("object-contain drop-shadow-xl ", item.className)}
           />
         ))}
       </div>
