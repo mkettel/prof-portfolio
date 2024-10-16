@@ -25,7 +25,7 @@ export default function Projects() {
         </Paragraph>
         <Contact />
         <div className="">
-          <CubeTest />
+          {/* <CubeTest /> */}
         </div>
       </Container>
     </div>
