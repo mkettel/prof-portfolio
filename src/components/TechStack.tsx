@@ -65,6 +65,12 @@ export const TechStack = () => {
 
       className: "h-10 w-10",
     },
+    {
+      title: "Python",
+      src: "/images/logos/python-new.png",
+
+      className: "h-10 w-14",
+    },
   ];
 
   // SCROLLING TECH STACK
@@ -87,7 +93,7 @@ export const TechStack = () => {
       >
         Tech Stack
       </Heading>
-      <div className="flex gap-4 md:gap-8 dark:bg-zinc-300 md:justify-center p-4 dark:items-center dark:rounded-md drop-shadow-lg flex-wrap  ">
+      <div className="flex gap-4 md:gap-8  p-4 dark:items-center dark:drop-shadow-white dark:rounded-md drop-shadow-lg flex-wrap  ">
         {stack.map((item) => (
           <Image
             src={item.src}
