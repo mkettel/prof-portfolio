@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function Projects() {
-  // TODO: Add a project page 
+  // TODO: Add a project page for now yo
   return (
     <Container>
       <Heading className="font-black mb-10 dark:text-white">
