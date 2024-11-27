@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react"
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
             </div>
           </div>
           <Analytics />
+          <GoogleAnalytics />
         </ThemeProvider>
       </body>
     </html>

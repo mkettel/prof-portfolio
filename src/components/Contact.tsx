@@ -82,6 +82,14 @@ export const Contact = () => {
         throw new Error("Failed to send message");
       }
 
+      // Track successful form submission
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_submission', {
+          'event_category': 'Contact',
+          'event_label': 'Contact Form Success'
+        });
+      }
+
       setSubmitStatus({
         type: "success",
         message: "Message sent successfully! We'll get back to you soon.",
@@ -94,6 +102,14 @@ export const Contact = () => {
       }, 5000);
 
     } catch (error) {
+      // Track form submission errors
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_error', {
+          'event_category': 'Contact',
+          'event_label': 'Contact Form Error'
+        });
+      }
+      
       setSubmitStatus({
         type: "error",
         message: "Failed to send message. Please try again later.",
