@@ -9,7 +9,7 @@ import { Analytics } from "@vercel/analytics/react"
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: {
     default: 'Matt Kettelkamp | Developer, Skier, and Person',
     template: '%s | Matt Kettelkamp Portfolio Website'
