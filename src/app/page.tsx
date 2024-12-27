@@ -20,7 +20,7 @@ export default function Home() {
     <Container>
       {/* fade gradient that follows the scroll */}
       <div 
-        className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-100 to-transparent dark:from-zinc-900 pointer-events-none"
+        className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent dark:from-zinc-900 pointer-events-none"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
       />
       <Heading className="font-black dark:text-white">Howdy! I&apos;m Matt</Heading>

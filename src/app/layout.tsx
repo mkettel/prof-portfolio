@@ -56,7 +56,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Sidebar />
-          <div className="lg:pl-2 lg:pt-2 bg-gray-100 dark:bg-zinc-900 duration-300 transition-colors flex-1 overflow-y-auto">
+          <div className="lg:pl-2 lg:pt-2 bg-white dark:bg-zinc-900 duration-300 transition-colors flex-1 overflow-y-auto">
             <div className="flex-1 bg-white dark:bg-zinc-900 duration-300 transition-colors min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 dark:lg:border-neutral-800 overflow-y-auto">
               {children}
               <Footer />
