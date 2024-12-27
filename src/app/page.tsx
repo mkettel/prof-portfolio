@@ -20,13 +20,13 @@ export default function Home() {
     <Container>
       {/* fade gradient that follows the scroll */}
       <div 
-        className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent dark:from-zinc-900 pointer-events-none"
+        className="fixed bottom-0 left-0 w-full h-36 bg-gradient-to-t from-white to-transparent dark:from-zinc-900 pointer-events-none"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
       />
       <Heading className="font-black dark:text-white">Howdy! I&apos;m Matt</Heading>
       <HeaderParagraph className="max-w-xl mt-4 dark:text-zinc-400">
         I&apos;m a developer that loves{" "}
-        <Highlight className="dark:text-black dark:rounded-sm">building products and random things</Highlight> with the hope that some people find them useful.
+        <Highlight className="dark:text-black dark:rounded-sm">building websites and random other applications</Highlight> with the hope that people enjoy them and find them useful.
       </HeaderParagraph>
       <Heading
         as="h2"
