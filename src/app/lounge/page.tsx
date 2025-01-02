@@ -1,7 +1,7 @@
 export default function Lounge() {
   return (
     <>
-      <div className="relative flex text-xl h-screen w-full overflow-hidden">
+      <div className="relative flex text-xl h-screen bg-black w-full overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(50)].map((_, i) => (
             <div

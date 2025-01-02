@@ -18,42 +18,42 @@ import optikalLeads from "public/images/optikal-leads.png";
 import optikalConduction from "public/images/optikal-conduction.png";
 
 export const products = [
-  // {
-  //   id: 1, 
-  //   href: "https://optical-ekg.vercel.app/",
-  //   title: "Optikal EKG",
-  //   description:
-  //     "Educational resource for understanding and learning about EKGs in a 3D visualization experience.",
-  //   thumbnail: optikalHomepage,
-  //   images: [optikalConduction, optikalLeads],  
-  //   stack: ["Nextjs", "Tailwindcss", "Framer Motion", "AI", "Blender", "Three.js"],
-  //   client: "me",
-  //   clientBlurb: "Made for the world by",
-  //   slug: "optikal-ekg",
-  //   content: (
-  //     <div>
-  //       <p>
-  //       I first thought of this project when I was working as a cardiology tech at a hospital years ago. I was tasked with reading and monitoring EKGs all day long to make sure that 
-  //       patients were not having any heart issues. It was interesting and challenging work and I realized pretty quickly that the little squiggle lines on the screen tell a much 
-  //       bigger story than what meets the eye. Each squiggle line, in each different lead, tells a different story about what the heart is doing at that moment in an 
-  //       electrical, mechanical, and hemodynamic sense. This is not only fasinating but extremely complex and very difficult to visualize and understand. I wondered why 
-  //       has there not been a translation from the squiggle to the visual? If we are doing this all day long in our heads to decipher what is going on, why not build a 
-  //       tool that can do this for us? This is where the idea for Optikal EKG was born.
-  //         {" "}
-  //       </p>
-  //       <p>
-  //         This is an ongoing project for me. I have started with walkthrough modules. These modules aim to teach the user the basics of the electrical conduction system components 
-  //         of the heart and how they are represented in an EKG. The other walkthrough module that I have implemented is a visualization of the 12 leads of an EKG and their 
-  //         viewpoint on the heart. The goal here is to help understand how the spatial orientation of the leads lead to differences in the EKG waveform. I believe that building
-  //         this mental model will help students and professionals cultivate a deeper understanding of how and EKG is really looking at the heart and what it is telling us. The 
-  //         roadmap for the project is vast, with big goals ahead. Realtime animations of differnent heart rhythms, with deep dives on the pathology that leads to each one. Interactive 
-  //         quizzes, and with the largest goal of realtime visualization of real heart data from an EKG. This is a project that I am very passionate about and I am excited to see where
-  //         it goes ❤️
-  //       </p>
-  //       {" "}
-  //     </div>
-  //   ),
-  // },
+  {
+    id: 1, 
+    href: "https://optical-ekg.vercel.app/",
+    title: "Opti",
+    description:
+      "Educational resource for understanding and learning about EKGs in a 3D visualization experience.",
+    thumbnail: optikalHomepage,
+    images: [optikalConduction, optikalLeads],  
+    stack: ["Nextjs", "React", "Tailwindcss", "Framer Motion", "AI", "Blender", "Three.js"],
+    client: "me",
+    clientBlurb: "Made for the world by",
+    slug: "optikal-ekg",
+    content: (
+      <div>
+        <p>
+        I first thought of this project when I was working as a cardiology tech at a hospital years ago. I was tasked with reading and monitoring EKGs all day long to make sure that 
+        patients were not having any heart issues. It was interesting and challenging work and I realized pretty quickly that the little squiggle lines on the screen tell a much 
+        bigger story than what meets the eye. Each squiggle line, in each different lead, tells a different story about what the heart is doing at that moment in an 
+        electrical, mechanical, and hemodynamic sense. This is not only fasinating but extremely complex and very difficult to visualize and understand. I wondered why 
+        has there not been a translation from the squiggle to the visual? If we are doing this all day long in our heads to decipher what is going on, why not build a 
+        tool that can do this for us? This is where the idea for Optikal EKG was born.
+          {" "}
+        </p>
+        <p>
+          This is an ongoing project for me. I have started with walkthrough modules. These modules aim to teach the user the basics of the electrical conduction system components 
+          of the heart and how they are represented in an EKG. The other walkthrough module that I have implemented is a visualization of the 12 leads of an EKG and their 
+          viewpoint on the heart. The goal here is to help understand how the spatial orientation of the leads lead to differences in the EKG waveform. I believe that building
+          this mental model will help students and professionals cultivate a deeper understanding of how and EKG is really looking at the heart and what it is telling us. The 
+          roadmap for the project is vast, with big goals ahead. Realtime animations of differnent heart rhythms, with deep dives on the pathology that leads to each one. Interactive 
+          quizzes, and with the largest goal of realtime visualization of real heart data from an EKG. This is a project that I am very passionate about and I am excited to see where
+          it goes ❤️
+        </p>
+        {" "}
+      </div>
+    ),
+  },
   {
     id: 2, 
     href: "https://chapter-gen.vercel.app/",
