@@ -77,13 +77,13 @@ export default function About() {
         <Paragraph className=" mt-4 dark:text-zinc-400">
           Since the early days of my journey, I&apos;ve been captivated by the
           art of crafting exceptional digital experiences. As a developer, I
-          thrive on turning lines of code into functional and elegant solutions.
+          thrive on turning lines of code into functional and elegant solutions to problems that we all face in everyday life.
         </Paragraph>
         <Paragraph className=" mt-4 dark:text-zinc-400">
           What sets me apart is my unwavering appreciation for learning. No matter
           the topic or task, I approach it with an open mind and a willingness to
           grow. This mindset has exposed me to a wide array of technologies and
-          methodologies, allowing me to tackle any challenge with confidence.
+          methodologies, allowing me to tackle any challenge with confidence and excitement.
         </Paragraph>
         <Paragraph className=" mt-4 dark:text-zinc-400">
           Through this website, I aim to share my insights, experiences, and
