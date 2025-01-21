@@ -160,7 +160,7 @@ export const Contact = () => {
       )}
 
       <form className="space-y-4" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row justify-between gap-5">
+        <div className="flex  flex-col md:flex-row justify-between gap-5">
           <div className="flex-1">
             <input
               type="text"
@@ -180,6 +180,7 @@ export const Contact = () => {
               </p>
             )}
           </div>
+          {/* small */}
 
           <div className="flex-1">
             <input
