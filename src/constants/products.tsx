@@ -16,6 +16,9 @@ import djCode from "public/images/dj-code.png";
 import optikalHomepage from "public/images/optikal-homepage.png";
 import optikalLeads from "public/images/optikal-leads.png";
 import optikalConduction from "public/images/optikal-conduction.png";
+import sjHome from "public/images/sj-Home.png"
+import sjPageOne from "public/images/sj-page-1.png"
+import sjPageLast from "public/images/sj-page-last.png"
 
 export const products = [
   {
@@ -98,6 +101,39 @@ export const products = [
   },
   {
     id: 3, 
+    href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    title: "LookBook",
+    description:
+      "A digital 3D book for my friends who got married with pictures from their wedding",
+    thumbnail: sjHome,
+    images: [sjPageOne, sjPageLast],  
+    stack: ["React", "React Three Fiber", "Three.js", "Tailwindcss", "Framer Motion"],
+    client: "Some Buddies",
+    clientBlurb: "Made with love for",
+    slug: "lookbook",
+    content: (
+      <div>
+        <p>
+          I wanted to create another 3D project and I also wanted to make something with some meaning so I decided that I would create a 
+          fun way to display all of the photos taken from my friends wedding. This project utilizes React Three Fiber to create the scene and the book itself.
+          {" "}
+        </p>
+        <p>
+          The book is using the wigglebones library to add joints to the page meshes. This is what allows us to create the page bend when the page is turning.
+          We place images on top of the page meshes and created custom designs for the fron and back covers. I used the alpha map to create glossy reflections
+          of different designs for the front and back cover as well for a nice little detail. 
+            {" "}
+        </p>
+        <p>
+          Because there are a lot of photos that are more personal, shoot me a message and I will send you a link to the project :)
+            {" "}
+        </p>
+        {" "}
+      </div>
+    ),
+  },
+  {
+    id: 4, 
     href: "https://thumbnail-generator-dev.pxlagency.com/",
     title: "Thumbnail Generator",
     description:
@@ -132,7 +168,7 @@ export const products = [
     ),
   },
   {
-    id: 4,
+    id: 5,
     href: "https://www.gabbysdollhouse.com/",
     title: "Gabby's Dollhouse",
     description:
@@ -159,7 +195,7 @@ export const products = [
     ),
   },
   {
-    id: 5,
+    id: 6,
     href: "https://oravai-app.vercel.app/",
     title: "Oravai",
     description:
@@ -189,7 +225,7 @@ export const products = [
     ),
   },
   {
-    id: 6,
+    id: 7,
     href: "https://dj-one.vercel.app/",
     title: "DJ Invite",
     description:

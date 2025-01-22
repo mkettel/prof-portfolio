@@ -180,7 +180,6 @@ export const Contact = () => {
               </p>
             )}
           </div>
-          {/* small */}
 
           <div className="flex-1">
             <input
