@@ -114,7 +114,7 @@ export const products = [
     content: (
       <div>
         <p>
-          LookBook is a custom-built 3D digital book created to celebrate my friends' wedding by showcasing their photos in an immersive, interactive experience.
+          LookBook is a custom-built 3D digital book created to celebrate my friends&apos; wedding by showcasing their photos in an immersive, interactive experience.
           This project combines meaningful design with technical complexity to create a unique way of sharing memories.
         </p>
         <p>
@@ -131,7 +131,7 @@ export const products = [
           Animations, like page-turning, are controlled with dynamic state updates and easing functions, providing a smooth user experience.
         </p>
         <p>
-          Due to the personal nature of the photos, the project is not publicly available. However, I’d be happy to share a private link—just shoot me a message!
+          Due to the personal nature of the photos, the project is not publicly available. However, I&apos;d be happy to share a private link—just shoot me a message!
         </p>
       </div>
     ),
