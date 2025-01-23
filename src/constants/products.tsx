@@ -16,7 +16,7 @@ import djCode from "public/images/dj-code.png";
 import optikalHomepage from "public/images/optikal-homepage.png";
 import optikalLeads from "public/images/optikal-leads.png";
 import optikalConduction from "public/images/optikal-conduction.png";
-import sjHome from "public/images/sj-Home.png"
+import sjHome from "public/images/sj-home.png"
 import sjPageOne from "public/images/sj-page-1.png"
 import sjPageLast from "public/images/sj-page-last.png"
 
