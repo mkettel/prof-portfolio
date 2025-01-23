@@ -104,7 +104,7 @@ export const products = [
     href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     title: "LookBook",
     description:
-      "A digital 3D book for my friends who got married with pictures from their wedding",
+      "An interactive 3D photo book that uses advanced animations and custom designs to celebrate my friends' wedding.",
     thumbnail: sjHome,
     images: [sjPageOne, sjPageLast],  
     stack: ["React", "React Three Fiber", "Three.js", "Tailwindcss", "Framer Motion"],
@@ -114,24 +114,28 @@ export const products = [
     content: (
       <div>
         <p>
-          I wanted to create another 3D project and I also wanted to make something with some meaning so I decided that I would create a 
-          fun way to display all of the photos taken from my friends wedding. This project utilizes React Three Fiber to create the scene and the book itself.
-          {" "}
+          LookBook is a custom-built 3D digital book created to celebrate my friends' wedding by showcasing their photos in an immersive, interactive experience.
+          This project combines meaningful design with technical complexity to create a unique way of sharing memories.
         </p>
         <p>
-          The book is using the wigglebones library to add joints to the page meshes. This is what allows us to create the page bend when the page is turning.
-          We place images on top of the page meshes and created custom designs for the fron and back covers. I used the alpha map to create glossy reflections
-          of different designs for the front and back cover as well for a nice little detail. 
-            {" "}
+          The project is built with <strong className="text-white">React Three Fiber</strong> for rendering the 3D scene and <strong className="text-white">Three.js</strong> for advanced geometry manipulation. 
+          I used the <strong className="text-white">Wigglebones</strong> library to integrate a skeleton system into the page meshes, enabling smooth bending animations as the pages turn.
+          Each page mesh is skinned with bones, and vertex weights are calculated dynamically to ensure natural deformation during animations.
         </p>
         <p>
-          Because there are a lot of photos that are more personal, shoot me a message and I will send you a link to the project :)
-            {" "}
+          Textures are applied using <strong className="text-white">alpha maps</strong> for detailed, glossy reflections, adding realism to the front and back covers. 
+          The project also employs custom shaders and materials for the pages, combining image textures with emissive highlights to enhance interactivity and visual appeal.
         </p>
-        {" "}
+        <p>
+          To ensure performance and scalability, I preloaded textures for all pages and optimized the geometry by reusing a single mesh structure for the entire book. 
+          Animations, like page-turning, are controlled with dynamic state updates and easing functions, providing a smooth user experience.
+        </p>
+        <p>
+          Due to the personal nature of the photos, the project is not publicly available. However, I’d be happy to share a private link—just shoot me a message!
+        </p>
       </div>
     ),
-  },
+  },  
   {
     id: 4, 
     href: "https://thumbnail-generator-dev.pxlagency.com/",
