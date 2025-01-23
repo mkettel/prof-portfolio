@@ -23,7 +23,7 @@ import sjPageLast from "public/images/sj-page-last.png"
 export const products = [
   {
     id: 1, 
-    href: "https://optical-ekg.vercel.app/",
+    href: "https://opti-ecg.com/",
     title: "Opti",
     description:
       "Educational resource for understanding and learning about EKGs in a 3D visualization experience.",
