@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Heading } from "./Heading";
 import { twMerge } from "tailwind-merge";
 
+// howdy
+
 export const TechStack = () => {
   const stack = [
     {
