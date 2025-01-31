@@ -5,26 +5,39 @@ import { ChevronLeft, ChevronRight, X, Expand, Move } from 'lucide-react';
 const CustomCursor = ({ mouseX, mouseY }: any) => {
   return (
     <motion.div
-      className="fixed pointer-events-none z-[100] flex items-center justify-center"
       style={{
-        left: mouseX,
-        top: mouseY,
-        translateX: '-50%',
-        translateY: '-50%',
-      }}
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{
-        type: "spring",
-        damping: 25,
-        stiffness: 100,
-        mass: 0.7
+        position: 'fixed',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 100,
+        mixBlendMode: 'difference'
       }}
     >
-      <div className="w-16 h-16 mix-blend-difference rounded-full border-2 p-6 border-black flex items-center justify-center">
-        <p className='text-black mix-blend-difference'>drag</p>
-      </div>
+      <motion.div
+        style={{
+          position: 'absolute',
+          left: mouseX,
+          top: mouseY,
+          translateX: '-50%',
+          translateY: '-50%',
+        }}
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.8, opacity: 0 }}
+        transition={{
+          type: "spring",
+          damping: 25,
+          stiffness: 100,
+          mass: 0.7
+        }}
+      >
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+          <Move />
+        </div>
+      </motion.div>
     </motion.div>
   );
 };
@@ -81,14 +94,14 @@ export default function BentoGrid({
 
   return (
     <>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showCursor && (
           <CustomCursor 
             mouseX={mouseX} 
             mouseY={mouseY} 
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <div 
         className="relative group rounded-lg"
@@ -97,7 +110,7 @@ export default function BentoGrid({
         onMouseLeave={() => setShowCursor(false)}
       >
         <motion.div 
-          className="overflow-hidden cursor-none rounded-lg"
+          className="overflow-hidden cursor-auto rounded-lg"
         >
           <motion.div
             drag="x"
@@ -155,7 +168,7 @@ export default function BentoGrid({
           disabled={currentIndex === 0}
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full 
                    opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0
-                   hover:bg-black/90 disabled:cursor-not-allowed cursor-none"
+                   hover:bg-black/90 disabled:cursor-not-allowed cursor-pointer"
           aria-label="Previous image"
         >
           <ChevronLeft size={24} />
@@ -166,7 +179,7 @@ export default function BentoGrid({
           disabled={currentIndex === allImages.length - 1}
           className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full 
                    opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0
-                   hover:bg-black/90 disabled:cursor-not-allowed cursor-none"
+                   hover:bg-black/90 disabled:cursor-not-allowed cursor-pointer"
           aria-label="Next image"
         >
           <ChevronRight size={24} />
