@@ -1,11 +1,16 @@
+'use client';
+
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef} from "react";
 import { Heading } from "./Heading";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
-// howdy
 
 export const TechStack = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+
   const stack = [
     {
       title: "Next.js",
@@ -75,27 +80,58 @@ export const TechStack = () => {
     },
   ];
 
-  // SCROLLING TECH STACK
-  const [scrollPosition, setScrollPosition] = useState(0);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if(scrollRef.current) {
+      setWidth(scrollRef.current.scrollWidth);
+    }
+  }, [])  
   
   return (
     <div>
       <Heading
         as="h2"
-        className="font-black text-lg md:text-lg lg:text-lg mt-20 mb-4"
+        className="font-black relative text-lg md:text-lg lg:text-lg mt-20 mb-4"
       >
         Tech Stack
       </Heading>
-      <div className="flex gap-4 md:gap-8  p-4 dark:items-center dark:drop-shadow-white dark:rounded-md drop-shadow-lg flex-wrap  ">
+
+     
+      <div className="relative max-w-[90%] overflow-hidden rounded-md">
+
+        <div className="absolute left-0 -top-0 h-full w-60 bg-gradient-to-r from-white to-transparent dark:from-zinc-900 z-20" />
+        <div className="absolute right-0 -top-0 h-full w-60 bg-gradient-to-l from-white to-transparent dark:from-zinc-900 z-20" />
+        <motion.div className="flex gap-4 md:gap-8 p-4 dark:items-center dark:drop-shadow-white dark:rounded-md drop-shadow-lg "
+          ref={scrollRef}
+          animate={{
+            x: [0,-width / 2] // 0 is the initial value, 100 is the final value because the width of the div is 100vw
+          }}
+          transition={{ repeat: Infinity, repeatType: 'loop', duration: 100, ease: "linear" }}
+        >
+          {stack.map((item) => (
+            <Image
+              src={item.src}
+              key={item.src}
+              width={`200`}
+              height={`200`}
+              alt={item.title}
+              className={twMerge("object-contain drop-shadow-xl ", item.className)}
+            />
+          ))}
+
+          {stack.map((item) => (
+            <Image
+              src={item.src}
+              key={item.src}
+              width={`200`}
+              height={`200`}
+              alt={item.title}
+              className={twMerge("object-contain drop-shadow-xl ", item.className)}
+            />
+          ))}
+
+        </motion.div>
+      </div>
+      {/* <div className="flex gap-4 md:gap-8 p-4 dark:items-center dark:drop-shadow-white dark:rounded-md drop-shadow-lg flex-wrap  ">
         {stack.map((item) => (
           <Image
             src={item.src}
@@ -106,7 +142,7 @@ export const TechStack = () => {
             className={twMerge("object-contain drop-shadow-xl ", item.className)}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
