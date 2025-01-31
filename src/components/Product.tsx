@@ -8,6 +8,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { products } from "@/constants/products";
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+import BentoGrid from "./ui/BentoGrid";
 
 
 export const SingleProduct = ({ product }: { product: Product }) => {
@@ -68,7 +69,12 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-100 to-transparent dark:from-zinc-900 pointer-events-none"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
       />
-      <AnimatePresence mode="wait">
+      
+      {/* Image Grid */}
+      <BentoGrid thumbnail={product.thumbnail} images={product.images} title={product.title} />
+      
+      
+      {/* <AnimatePresence mode="wait">
         <motion.div
           key={typeof activeImage === 'string' ? activeImage : activeImage.src}
           initial={{ opacity: 0 }}
@@ -108,7 +114,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
             />
           </motion.button>
         ))}
-      </motion.div>
+      </motion.div> */}
       
       <div className="flex md:flex-row justify-between items-center flex-col mt-16 sm:mt-20">
         <Heading className="font-black mb-0 md:mb-2 pb-1"> {product.title}</Heading>
