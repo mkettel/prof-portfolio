@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div className="relative">
+    <div className="relative min-h-[90vh]">
       <Container >
         <Heading className="font-black mb-2 dark:text-white">Contact Me</Heading>
         <Paragraph className="mb-10 max-w-xl dark:text-zinc-400">
