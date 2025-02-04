@@ -2,6 +2,30 @@ import React, { useState } from 'react';
 import { motion, useMotionValue, animate, AnimatePresence, useSpring } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Expand, Move } from 'lucide-react';
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.3
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 30
+    }
+  }
+};
+
 const CustomCursor = ({ mouseX, mouseY }: any) => {
   return (
     <motion.div
@@ -113,6 +137,9 @@ export default function BentoGrid({
           className="overflow-hidden cursor-auto rounded-lg"
         >
           <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
             drag="x"
             dragConstraints={{
               left: -((allImages.length - 1) * (slideWidth + gap)),
@@ -135,7 +162,8 @@ export default function BentoGrid({
           >
             {allImages.map((image: any, index: number) => (
               <motion.div 
-                key={index} 
+                key={index}
+                variants={item}
                 className="flex-none relative group/image"
                 whileHover={{ scale: 1.00 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.2 }}
@@ -147,9 +175,8 @@ export default function BentoGrid({
                   draggable={false}
                 />
                 <motion.button
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1, scale: 1.1 }}
-                  className="absolute top-4 right-4 bg-black/50 p-2 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-all hover:bg-black/70"
+                  
+                  className="absolute top-4 right-4 bg-black/30 p-2 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-all hover:bg-black/70"
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedImage(index);
