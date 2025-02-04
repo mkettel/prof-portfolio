@@ -176,7 +176,7 @@ export const products = [
     href: "https://www.gabbysdollhouse.com/",
     title: "Gabby's Dollhouse",
     description:
-      "International website for the popular children's show Gabby's Dollhouse.",
+      "International website for the popular children's tv show Gabby's Dollhouse.",
     thumbnail: gabbysDollhouseHome,
     images: [gabbysDollhouseFPage, gabbysDollhouseCharacter],
     stack: ["Vue.js", "Nuxt", "SCSS", "PHP", "MySQL"],
