@@ -179,7 +179,7 @@ export const products = [
       "International website for the popular children's show Gabby's Dollhouse.",
     thumbnail: gabbysDollhouseHome,
     images: [gabbysDollhouseFPage, gabbysDollhouseCharacter],
-    stack: ["Vue.js", "SCSS", "PHP", "MySQL"],
+    stack: ["Vue.js", "Nuxt", "SCSS", "PHP", "MySQL"],
     client: "Dreamworks",
     clientBlurb: "Built with PXL Agency for",
     slug: "gabbysdollhouse",
