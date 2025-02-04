@@ -118,7 +118,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
       
       <div className="flex md:flex-row justify-between items-center flex-col mt-16 sm:mt-20">
         <Heading className="font-black mb-0 md:mb-2 pb-1"> {product.title}</Heading>
-        <div className="flex items-center space-x-2 md:mb-1 mb-2 mt-2 md:mt-0 w-full md:justify-end">
+        <div className="flex items-center overflow-scroll space-x-2 md:mb-1 mb-2 mt-2 md:mt-0 w-full md:justify-end">
           {product.stack?.map((stack: string) => (
             <span
               key={stack}

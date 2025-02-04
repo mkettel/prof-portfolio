@@ -171,7 +171,7 @@ export default function BentoGrid({
                 <img
                   src={image.src}
                   alt={image.title}
-                  className="rounded-lg w-[40vw] h-full object-cover select-none"
+                  className="rounded-lg w-auto h-[25vh] md:w-[40vw] md:h-full object-cover select-none"
                   draggable={false}
                 />
                 <motion.button
