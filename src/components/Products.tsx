@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 export const Products = () => {
   return (
     <div>
-      <div className="grid grid-cols-1  gap-4">
+      <div className="grid grid-cols-1 gap-4">
         {products.map((product: Product, idx: number) => (
           <motion.div
             key={product.href}
@@ -28,7 +28,7 @@ export const Products = () => {
             <Link
               href={product.slug ? `/projects/${product.slug}` : product.href}
               key={product.href}
-              className="group flex p-4 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 dark:hover:bg-zinc-800 rounded-2xl transition duration-200"
+              className="group hover:translate-x-1 ease-in flex p-4 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 dark:hover:bg-zinc-800 rounded-2xl transition duration-200"
             >
               <Image
                 src={product.thumbnail}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, animate, AnimatePresence, useSpring } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Expand, Move } from 'lucide-react';
 
@@ -80,17 +80,40 @@ export default function BentoGrid({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState<null | number>(null);
   const [showCursor, setShowCursor] = useState(false);
+  const [slideWidth, setSlideWidth] = useState(0);
+  const gap = 16;
   
   const mouseX = useSpring(0, { damping: 25, stiffness: 150, mass: 0.5 });
   const mouseY = useSpring(0, { damping: 25, stiffness: 150, mass: 0.5 });
+
+  useEffect(() => {
+    const updateSlideWidth = () => {
+      const newWidth = window.innerWidth * 0.36;
+      setSlideWidth(newWidth);
+      console.log('newWidth', newWidth);
+      
+      // Update current slide position when width changes
+      animate(x, -(currentIndex * (newWidth + gap)), {
+        type: "spring",
+        stiffness: 300,
+        damping: 30
+      });
+    };
+
+    // Initial width calculation
+    updateSlideWidth();
+
+    // Add resize listener
+    window.addEventListener('resize', updateSlideWidth);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', updateSlideWidth);
+  }, [currentIndex, gap, x]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     mouseX.set(e.clientX);
     mouseY.set(e.clientY);
   };
-
-  const slideWidth = window.innerWidth * 0.36;
-  const gap = 16;
   
   const handleNext = () => {
     if (currentIndex < allImages.length - 1) {
