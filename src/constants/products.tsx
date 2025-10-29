@@ -13,9 +13,11 @@ import chapGenGen from "public/images/chap-gen-generated.png";
 import djHome from "public/images/dj-home.png";
 import djModal from "public/images/dj-modal.png";
 import djCode from "public/images/dj-code.png";
-import optikalHomepage from "public/images/optikal-homepage.png";
+import optikalHomepage from "public/images/opti-home-new.png";
 import optikalLeads from "public/images/optikal-leads.png";
 import optikalConduction from "public/images/optikal-conduction.png";
+import optiSimulator from "public/images/opti-simulator.png";
+import optiAxis from "public/images/opti-axis.png";
 import sjHome from "public/images/sj-home.png"
 import sjPageOne from "public/images/sj-page-1.png"
 import sjPageLast from "public/images/sj-page-last.png"
@@ -41,7 +43,7 @@ export const products = [
     description:
       "Educational resource for understanding and learning about EKGs in a 3D visualization experience.",
     thumbnail: optikalHomepage,
-    images: [optikalConduction, optikalLeads],  
+    images: [optikalConduction, optiAxis, optiSimulator, optikalLeads],  
     stack: ["Nextjs", "React", "Tailwindcss", "Framer Motion", "AI", "Blender", "Three.js", "Recharts"],
     client: "me",
     clientBlurb: "Made for the world by",
