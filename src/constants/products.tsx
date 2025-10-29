@@ -293,36 +293,46 @@ export const products = [
     ),
   },  
   {
-    id: 6, 
-    href: "https://thumbnail-generator-dev.pxlagency.com/",
-    title: "Thumbnail Generator",
+    id: 9,
+    href: "https://dj-one.vercel.app/",
+    title: "DJ Invite",
     description:
-      "Internal tool to help create thumbnails for clients in a more efficient manner.",
-    thumbnail: thumbGenDash,
-    images: [thumbGenProduct, thumbGenCode],
-    stack: ["Nextjs", "React", "Tailwindcss", "Framer Motion", "Canvas"],
-    client: "PXL Agency",
-    clientBlurb: "Made for and with the wonderful team at",
-    slug: "thumbnailgenerator",
+      "A fun custom party invite I made for a friends' DJ event",
+    thumbnail: djHome,
+    images: [reel("/videos/dj-controls-compressed.mp4"), djModal, djCode],
+    stack: ["Nextjs", "React", "Tailwindcss", "Framer Motion", "React Three Fiber" ],
+    client: "Friend",
+    clientBlurb: "Built for a ",
+    slug: "djinvite",
     content: (
       <div>
         <p>
-        This internal tool is designed to streamline the thumbnail creation process for our 
-        YouTube optimization team, allowing for faster and more efficient production. It leverages specific 
-        templates based on the client&apos;s segment, enabling users to pull in images directly from YouTube 
-        or upload them from their computer. 
-          {" "}
+        One weekend, I decided to challenge myself with a fun project—creating a custom 3D invitation for a friend&apos;s 
+        upcoming DJ event. Inspired by the playful invitations on Partiful, I wanted to capture that same energy 
+        but with a twist: incorporating 3D elements.
+        {" "}
         </p>
         <p>
-        Using a combination of Sharp and Canvas, users can overlay PNG assets and customize various features 
-        of the thumbnail according to the segment&apos;s configuration needs. Once finalized, the thumbnail can be 
-        uploaded directly to the YouTube channel.
+        The first step was finding a 3D model of a turntable because, let&apos;s be honest, modeling one myself would&apos;ve taken ages! 
+        I found a free one, converted it from GLTF to a React Three Fiber component, and hit the ground running.
+        {" "}
         </p>
         <p>
-        Built with Next.js, Sharp, Tailwind, and Framer Motion, this tool offers flexibility and responsiveness. 
-        Future plans include integrating AI-driven features to suggest thumbnails or generate additional content to 
-        further enhance the tool&apos;s capabilities.
+        The goal was simple: give people a cool spot to RSVP. I built a modal that connected to an email service so I&apos;d get notified when 
+        someone RSVP&apos;d. With the core functionality in place, it was time to crank up the vibe. I added a custom shader for the background, 
+        wrapping the scene in a giant sphere with a neon, color-changing atmosphere, and threw in some camera controls tied to mouse movement 
+        for a bit of interactivity.
+        {" "}
         </p>
+        <p>
+        Of course, a 3D turntable wouldn&apos;t be complete without music, so I rigged it to play a track from YouTube when the play button was pressed.
+        {" "}
+        </p>
+        <p>
+        While I ran out of time before the event to add everything I envisioned, I was proud of the result and learned a ton in the process. 
+        Next time, I&apos;ll definitely spend more time optimizing the model to improve performance—but hey, that&apos;s what projects like this are all about! {" "}
+        </p>
+        
         {" "}
       </div>
     ),
@@ -345,6 +355,10 @@ export const products = [
         As the lead on the frontend development team, I was responsible for building the international website for the popular 
         children&apos;s show Gabby&apos;s Dollhouse. The site was developed using Vue.js for the frontend, integrated with a PHP-based 
         CMS on the backend to dynamically serve content. The vibrant and playful design of the site made the build especially enjoyable. {" "}
+        </p>
+        <p>I worked closely with design to build out each of the components that we used for every page of the website. We developed the component library to allow 
+          the client to have full control in the custom CMS over how they chose to display the content on the page as they updated the content in the future. This website 
+          was super fun and playful to work on. From the little kittens that move in the navbar to the bubbles in the background of the pages, it was a joy to work on.
         </p>
         <p>
         The website was designed to be fully responsive and optimized to handle high traffic volumes. Performance optimization and intuitive 
@@ -385,48 +399,39 @@ export const products = [
     ),
   },
   {
-    id: 9,
-    href: "https://dj-one.vercel.app/",
-    title: "DJ Invite",
+    id: 6, 
+    href: "https://thumbnail-generator-dev.pxlagency.com/",
+    title: "Thumbnail Generator",
     description:
-      "A fun custom party invite I made for a friends' DJ event",
-    thumbnail: djHome,
-    images: [djModal, djCode],
-    stack: ["Nextjs", "React", "Tailwindcss", "Framer Motion", "React Three Fiber" ],
-    client: "Friend",
-    clientBlurb: "Built for a ",
-    slug: "djinvite",
+      "Internal tool to help create thumbnails for clients in a more efficient manner.",
+    thumbnail: thumbGenDash,
+    images: [thumbGenProduct, thumbGenCode],
+    stack: ["Nextjs", "React", "Tailwindcss", "Framer Motion", "Canvas"],
+    client: "PXL Agency",
+    clientBlurb: "Made for and with the wonderful team at",
+    slug: "thumbnailgenerator",
     content: (
       <div>
         <p>
-        One weekend, I decided to challenge myself with a fun project—creating a custom 3D invitation for a friend&apos;s 
-        upcoming DJ event. Inspired by the playful invitations on Partiful, I wanted to capture that same energy 
-        but with a twist: incorporating 3D elements.
-        {" "}
+        This internal tool is designed to streamline the thumbnail creation process for our 
+        YouTube optimization team, allowing for faster and more efficient production. It leverages specific 
+        templates based on the client&apos;s segment, enabling users to pull in images directly from YouTube 
+        or upload them from their computer. 
+          {" "}
         </p>
         <p>
-        The first step was finding a 3D model of a turntable because, let&apos;s be honest, modeling one myself would&apos;ve taken ages! 
-        I found a free one, converted it from GLTF to a React Three Fiber component, and hit the ground running.
-        {" "}
+        Using a combination of Sharp and Canvas, users can overlay PNG assets and customize various features 
+        of the thumbnail according to the segment&apos;s configuration needs. Once finalized, the thumbnail can be 
+        uploaded directly to the YouTube channel.
         </p>
         <p>
-        The goal was simple: give people a cool spot to RSVP. I built a modal that connected to an email service so I&apos;d get notified when 
-        someone RSVP&apos;d. With the core functionality in place, it was time to crank up the vibe. I added a custom shader for the background, 
-        wrapping the scene in a giant sphere with a neon, color-changing atmosphere, and threw in some camera controls tied to mouse movement 
-        for a bit of interactivity.
-        {" "}
+        Built with Next.js, Sharp, Tailwind, and Framer Motion, this tool offers flexibility and responsiveness. 
+        Future plans include integrating AI-driven features to suggest thumbnails or generate additional content to 
+        further enhance the tool&apos;s capabilities.
         </p>
-        <p>
-        Of course, a 3D turntable wouldn&apos;t be complete without music, so I rigged it to play a track from YouTube when the play button was pressed.
-        {" "}
-        </p>
-        <p>
-        While I ran out of time before the event to add everything I envisioned, I was proud of the result and learned a ton in the process. 
-        Next time, I&apos;ll definitely spend more time optimizing the model to improve performance—but hey, that&apos;s what projects like this are all about! {" "}
-        </p>
-        
         {" "}
       </div>
     ),
   },
+  
 ];
