@@ -85,7 +85,7 @@ export const products = [
       <p>
         Working with Jeff and 3D artist Lucas Geitner, we created an immersive audio-visual listening experience.
         Rather than compromise on quality with real-time 3D rendering, we developed a frame-by-frame video sequence
-        system that preserves Lucas's high-fidelity 3D renders while enabling smooth, interactive camera movements.
+        system that preserves Lucas&apos;s high-fidelity 3D renders while enabling smooth, interactive camera movements.
       </p>
       <p>
         I engineered a custom playback system using 280 WebP-compressed frames organized into six navigable sequences
@@ -104,7 +104,7 @@ export const products = [
         This project presented unique challenges: maintaining ultra-high visual quality in a web environment,
         orchestrating complex audio routing with multiple gain nodes and analysers, and building responsive
         canvas-based visualizations. The result is a performant, immersive experience that pushes the boundaries
-        of what's possible with web audio and creative video optimization techniques.
+        of what&apos;s possible with web audio and creative video optimization techniques.
       </p>
       <p className="text-center font-bold text-red-400">
         This project will be live soon and I will update the URL.
