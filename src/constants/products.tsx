@@ -26,6 +26,7 @@ import dreamworks from "public/images/dreamworks-home.png";
 import robotabout from "public/images/robot-about.png";
 import robouthome from "public/images/robot-home.png";
 import { MediaItem } from "@/types/products";
+import auwSound from "public/images/auw-sound.png";
 
 // Helper to create MediaItems with proper typing
 const reel = (src: string): MediaItem => ({ type: 'reel', src });
@@ -69,13 +70,54 @@ export const products = [
     ),
   },
   {
+    id: 2, 
+    href: "https://auw-ashen.vercel.app/listening-experience",
+    title: "AUW - Listening Experience",
+    description: "Working with Jeff, the founder and CEO of AUW we built a listening experience for the artist Lou Phelps.",
+    thumbnail: auwSound,
+    images: [reel("/videos/auw-listening.mp4")],
+    stack: ["Nextjs", "React", "Tailwind", "Framer Motion", "ffmpeg"],
+    client: "AUW",
+    clientBlurb: "Built for the creative agency out of NYC, ",
+    slug: "auw",
+    content: (
+    <div>
+      <p>
+        Working with Jeff and 3D artist Lucas Geitner, we created an immersive audio-visual listening experience.
+        Rather than compromise on quality with real-time 3D rendering, we developed a frame-by-frame video sequence
+        system that preserves Lucas's high-fidelity 3D renders while enabling smooth, interactive camera movements.
+      </p>
+      <p>
+        I engineered a custom playback system using 280 WebP-compressed frames organized into six navigable sequences
+        (wide shot, left/right record views, and transitions between them). Using GSAP for interpolation and Canvas API
+        for rendering, the system provides fluid 30fps-like camera movements between three interactive viewpoints.
+        I implemented progressive loading with priority frames to ensure instant interaction while remaining assets
+        load in the background.
+      </p>
+      <p>
+        The audio system is built on the Web Audio API as a dual-deck DJ interface with independent playback controls,
+        queue management, and intelligent song transitions. Each deck features a custom waveform visualizer with
+        scrubbing capability and a real-time frequency analyzer that displays FFT data when audio is playing. The
+        crossfader uses gain node routing to blend between decks, creating an authentic DJ mixing experience.
+      </p>
+      <p>
+        This project presented unique challenges: maintaining ultra-high visual quality in a web environment,
+        orchestrating complex audio routing with multiple gain nodes and analysers, and building responsive
+        canvas-based visualizations. The result is a performant, immersive experience that pushes the boundaries
+        of what's possible with web audio and creative video optimization techniques.
+      </p>
+      {" "}
+    </div>
+    ),
+  },
+  {
     id: 3, 
     href: "https://www.dreamworks.com/",
     title: "DreamWorks Animation",
     description:
       "International website for the popular children's tv show Gabby's Dollhouse.",
     thumbnail: dreamworks,
-    images: [robotabout, robouthome],  
+    images: [reel("/videos/dreamworks-reel.mp4"),robotabout, robouthome],  
     stack: ["Vue.js", "SCSS", "PHP", "MySQL"],
     client: "DreamWorks",
     clientBlurb: "Built with PXL Agency for",
