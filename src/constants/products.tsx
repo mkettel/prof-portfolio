@@ -22,6 +22,9 @@ import sjPageLast from "public/images/sj-page-last.png"
 import pxlagencyHome from "public/images/pxl-thumb.png";
 import pxlagencyvideo from "public/images/pxl-2.png";
 import pxlcontact from "public/images/pxl-contact.png";
+import dreamworks from "public/images/dreamworks-home.png";
+import robotabout from "public/images/robot-about.png";
+import robouthome from "public/images/robot-home.png";
 
 export const products = [
   {
@@ -97,6 +100,31 @@ export const products = [
         time the previous year, the same period selected but just right before, or since the optimization began. There are several plans for future features and 
         enhancements to make the tool even more impactful.
           {" "}
+        </p>
+        {" "}
+      </div>
+    ),
+  },
+  {
+    id: 3, 
+    href: "https://www.dreamworks.com/",
+    title: "DreamWorks",
+    description:
+      "International website for the popular children's tv show Gabby's Dollhouse.",
+    thumbnail: dreamworks,
+    images: [robotabout, robouthome],  
+    stack: ["Vue.js", "SCSS", "PHP", "MySQL"],
+    client: "DreamWorks",
+    clientBlurb: "Built with PXL Agency for",
+    slug: "dreamworks",
+    content: (
+      <div>
+        <p>
+          While working at PXL Agency, I was responsible for regularly updating, enhancing and maintaining DreamWorks Animation's international website. 
+        </p>
+        <p>
+          Working with our designer, Orlando, we would build out the pages when a new movie would come out. We built out pages such as: The Wild Robot, Kung Fu Panda, How to Train Your Dragon,
+          Gabby's Dollhouse, Bad Guys, and more. I would update other pages to keep content, dates, and assets up to date. To do this we mainly used HTML, SCSS, PHP, and good ol fashioned HTML.
         </p>
         {" "}
       </div>

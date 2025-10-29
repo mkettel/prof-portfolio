@@ -1,6 +1,89 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, animate, AnimatePresence, useSpring } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Expand, Move } from 'lucide-react';
+import { MediaItem as MediaItemType } from '@/types/products';
+
+// Helper function to check if an item is a MediaItem
+const isMediaItem = (item: any): item is MediaItemType => {
+  return item && typeof item === 'object' && 'type' in item && 'src' in item;
+};
+
+// Helper function to get the source from any media type
+const getMediaSrc = (media: any): string => {
+  if (isMediaItem(media)) {
+    return typeof media.src === 'string' ? media.src : media.src.src;
+  }
+  return typeof media === 'string' ? media : media.src;
+};
+
+// Helper function to get media type
+const getMediaType = (media: any): 'image' | 'video' | 'reel' => {
+  if (isMediaItem(media)) {
+    return media.type;
+  }
+  return 'image'; // Default to image for backward compatibility
+};
+
+// Component to render different media types
+const MediaRenderer = ({
+  media,
+  className,
+  onClick
+}: {
+  media: any;
+  className?: string;
+  onClick?: () => void;
+}) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const type = getMediaType(media);
+  const src = getMediaSrc(media);
+  const poster = isMediaItem(media) && media.poster ? getMediaSrc(media.poster) : undefined;
+
+  useEffect(() => {
+    // Auto-play reels when they come into view
+    if (type === 'reel' && videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Silently handle autoplay restrictions
+      });
+    }
+
+    // Pause video when component unmounts
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
+    };
+  }, [type]);
+
+  if (type === 'video' || type === 'reel') {
+    return (
+      <video
+        ref={videoRef}
+        src={src}
+        poster={poster}
+        className={className}
+        controls={type === 'video'}
+        loop={type === 'reel'}
+        muted={type === 'reel'}
+        autoPlay={type === 'reel'}
+        playsInline
+        onClick={onClick}
+        draggable={false}
+        preload="metadata"
+      />
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={isMediaItem(media) ? media.title : 'media'}
+      className={className}
+      onClick={onClick}
+      draggable={false}
+    />
+  );
+};
 
 const container = {
   hidden: { opacity: 0 },
@@ -184,27 +267,25 @@ export default function BentoGrid({
             }}
           >
             {allImages.map((image: any, index: number) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 variants={item}
                 className="flex-none relative group/image"
                 whileHover={{ scale: 1.00 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.2 }}
               >
-                <img
-                  src={image.src}
-                  alt={image.title}
+                <MediaRenderer
+                  media={image}
                   className="rounded-lg w-auto h-[25vh] md:w-[40vw] md:h-full object-cover select-none"
-                  draggable={false}
                 />
                 <motion.button
-                  
+
                   className="absolute top-4 right-4 bg-black/30 p-2 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-all hover:bg-black/70"
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedImage(index);
                   }}
-                  aria-label="View full image"
+                  aria-label="View full media"
                 >
                   <Expand size={20} />
                 </motion.button>
@@ -273,21 +354,20 @@ export default function BentoGrid({
               className="relative max-w-7xl mx-auto p-4"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={allImages[selectedImage].src}
-                alt={allImages[selectedImage].title}
+              <MediaRenderer
+                media={allImages[selectedImage]}
                 className="max-h-[80vh] w-auto rounded-lg"
               />
-              
+
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-6 right-6 text-white bg-black/50 p-2 rounded-full hover:bg-black/70 transition-colors"
+                className="absolute top-6 right-6 text-white bg-black/50 p-2 rounded-full hover:bg-black/70 transition-colors z-10"
                 aria-label="Close modal"
               >
                 <X size={24} />
               </button>
 
-              <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
+              <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2 z-10">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
@@ -295,7 +375,7 @@ export default function BentoGrid({
                   }}
                   disabled={selectedImage === 0}
                   className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Previous image"
+                  aria-label="Previous media"
                 >
                   <ChevronLeft size={24} />
                 </button>
@@ -306,7 +386,7 @@ export default function BentoGrid({
                   }}
                   disabled={selectedImage === allImages.length - 1}
                   className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Next image"
+                  aria-label="Next media"
                 >
                   <ChevronRight size={24} />
                 </button>
