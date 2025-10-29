@@ -71,7 +71,7 @@ export const products = [
   },
   {
     id: 2, 
-    href: "https://auw-ashen.vercel.app/listening-experience",
+    href: "#",
     title: "AUW - Listening Experience",
     description: "Working with Jeff, the founder and CEO of AUW we built a listening experience for the artist Lou Phelps.",
     thumbnail: auwSound,
@@ -106,6 +106,10 @@ export const products = [
         canvas-based visualizations. The result is a performant, immersive experience that pushes the boundaries
         of what's possible with web audio and creative video optimization techniques.
       </p>
+      <p className="text-center font-bold text-red-400">
+        This project will be live soon and I will update the URL.
+      </p>
+        
       {" "}
     </div>
     ),
