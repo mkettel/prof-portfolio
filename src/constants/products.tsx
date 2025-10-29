@@ -25,6 +25,11 @@ import pxlcontact from "public/images/pxl-contact.png";
 import dreamworks from "public/images/dreamworks-home.png";
 import robotabout from "public/images/robot-about.png";
 import robouthome from "public/images/robot-home.png";
+import { MediaItem } from "@/types/products";
+
+// Helper to create MediaItems with proper typing
+const reel = (src: string): MediaItem => ({ type: 'reel', src });
+const video = (src: string): MediaItem => ({ type: 'video', src });
 
 export const products = [
   {
@@ -58,6 +63,31 @@ export const products = [
           roadmap for the project is vast, with big goals ahead. Realtime animations of differnent heart rhythms, with deep dives on the pathology that leads to each one. Interactive 
           quizzes, and with the largest goal of realtime visualization of real heart data from an EKG. This is a project that I am very passionate about and I am excited to see where
           it goes ❤️
+        </p>
+        {" "}
+      </div>
+    ),
+  },
+  {
+    id: 3, 
+    href: "https://www.dreamworks.com/",
+    title: "DreamWorks Animation",
+    description:
+      "International website for the popular children's tv show Gabby's Dollhouse.",
+    thumbnail: dreamworks,
+    images: [robotabout, robouthome],  
+    stack: ["Vue.js", "SCSS", "PHP", "MySQL"],
+    client: "DreamWorks",
+    clientBlurb: "Built with PXL Agency for",
+    slug: "dreamworks",
+    content: (
+      <div>
+        <p>
+          While working at PXL Agency, I was responsible for regularly updating, enhancing and maintaining DreamWorks Animation&apos;s international website.
+        </p>
+        <p>
+          Working with our designer, Orlando, we would build out the pages when a new movie would come out. We built out pages such as: The Wild Robot, Kung Fu Panda, How to Train Your Dragon,
+          Gabby&apos;s Dollhouse, Bad Guys, and more. I would update other pages to keep content, dates, and assets up to date. To do this we mainly used HTML, SCSS, PHP, and good ol fashioned HTML.
         </p>
         {" "}
       </div>
@@ -106,38 +136,13 @@ export const products = [
     ),
   },
   {
-    id: 3, 
-    href: "https://www.dreamworks.com/",
-    title: "DreamWorks Animation",
-    description:
-      "International website for the popular children's tv show Gabby's Dollhouse.",
-    thumbnail: dreamworks,
-    images: [robotabout, robouthome],  
-    stack: ["Vue.js", "SCSS", "PHP", "MySQL"],
-    client: "DreamWorks",
-    clientBlurb: "Built with PXL Agency for",
-    slug: "dreamworks",
-    content: (
-      <div>
-        <p>
-          While working at PXL Agency, I was responsible for regularly updating, enhancing and maintaining DreamWorks Animation&apos;s international website.
-        </p>
-        <p>
-          Working with our designer, Orlando, we would build out the pages when a new movie would come out. We built out pages such as: The Wild Robot, Kung Fu Panda, How to Train Your Dragon,
-          Gabby&apos;s Dollhouse, Bad Guys, and more. I would update other pages to keep content, dates, and assets up to date. To do this we mainly used HTML, SCSS, PHP, and good ol fashioned HTML.
-        </p>
-        {" "}
-      </div>
-    ),
-  },
-  {
     id: 4, 
     href: "https://www.pxlagency.com/",
     title: "PXL Agency",
     description:
       "Regularly updated, enhanced and maintained our agency website while working at PXL.",
     thumbnail: pxlagencyHome,
-    images: [pxlagencyvideo, pxlcontact],  
+    images: [reel("/videos/pxlagency-reel.mp4"),pxlagencyvideo, pxlcontact ],  
     stack: ["Javascript", "Ember.js", "SCSS", "GSAP"],
     client: "PXL Agency",
     clientBlurb: "Made for and with the wonderful team at",
