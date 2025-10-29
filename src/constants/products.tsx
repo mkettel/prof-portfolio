@@ -99,7 +99,7 @@ export const products = [
         at the z-axis of 0, the sphere will bump into the letter, causing it to swing and move around in a natural way. 
       </p>
       <p>
-        I added some fake wind to keep the scene "alive" and not static when the letters are not being interacted with. I added the sound for the chime effect using the HTML audio API. 
+        I added some fake wind to keep the scene feeling dynamic and not static when the letters are not being interacted with. I added the sound for the chime effect using the HTML audio API. 
         I set a frequency for each letter and when the letters collide with each other, the letter will play the sound associated with it. The scene itself was a fun aspect to create. 
         I utilized soft shadows and added a plane behind the letters to give the scene a bit more depth and realism. 
       </p>
