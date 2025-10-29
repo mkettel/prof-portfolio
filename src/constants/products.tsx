@@ -76,7 +76,7 @@ export const products = [
     title: "AUW - 3D Footer",
     description: "A creative 3D footer for the redesign of the AUW website.",
     thumbnail: auwFooter,
-    images: [reel("/videos/auw-listening.mp4")],
+    images: [reel("/videos/auw-footer.mp4")],
     stack: ["Nextjs", "React", "Tailwind", "Three.js", "Blender"],
     client: "AUW",
     clientBlurb: "Built for the creative agency out of NYC, ",
