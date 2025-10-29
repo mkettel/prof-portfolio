@@ -131,7 +131,7 @@ export const products = [
     ),
   },
   {
-    id: 3, 
+    id: 4, 
     href: "https://www.pxlagency.com/",
     title: "PXL Agency",
     description:
@@ -160,7 +160,7 @@ export const products = [
     ),
   },
   {
-    id: 4, 
+    id: 5, 
     href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     title: "LookBook",
     description:
@@ -197,7 +197,7 @@ export const products = [
     ),
   },  
   {
-    id: 5, 
+    id: 6, 
     href: "https://thumbnail-generator-dev.pxlagency.com/",
     title: "Thumbnail Generator",
     description:
@@ -232,7 +232,7 @@ export const products = [
     ),
   },
   {
-    id: 5,
+    id: 7,
     href: "https://www.gabbysdollhouse.com/",
     title: "Gabby's Dollhouse",
     description:
@@ -259,7 +259,7 @@ export const products = [
     ),
   },
   {
-    id: 6,
+    id: 8,
     href: "https://oravai-app.vercel.app/",
     title: "Oravai",
     description:
@@ -289,7 +289,7 @@ export const products = [
     ),
   },
   {
-    id: 7,
+    id: 9,
     href: "https://dj-one.vercel.app/",
     title: "DJ Invite",
     description:
