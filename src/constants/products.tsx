@@ -27,6 +27,7 @@ import robotabout from "public/images/robot-about.png";
 import robouthome from "public/images/robot-home.png";
 import { MediaItem } from "@/types/products";
 import auwSound from "public/images/auw-sound.png";
+import auwFooter from "public/images/auw-footer.png";
 
 // Helper to create MediaItems with proper typing
 const reel = (src: string): MediaItem => ({ type: 'reel', src });
@@ -72,11 +73,53 @@ export const products = [
   {
     id: 2, 
     href: "#",
+    title: "AUW - 3D Footer",
+    description: "A creative 3D footer for the redesign of the AUW website.",
+    thumbnail: auwFooter,
+    images: [reel("/videos/auw-listening.mp4")],
+    stack: ["Nextjs", "React", "Tailwind", "Three.js", "Blender"],
+    client: "AUW",
+    clientBlurb: "Built for the creative agency out of NYC, ",
+    slug: "auw-3d-footer",
+    content: (
+    <div>
+      <p>
+        Working with Jeff for the redesign of his agency website, we wanted to create a creative and engaging footer that would stand out. 
+        We decided to go with a 3D footer displaying the letters of the brand that act as windchimes that blow in the wind or upon your mouse moving through the letters.
+        We created the 3D letters in Blender using the appropriate font for the brand. I exported the letters as a GLTF file, importing them as a React Three Fiber component.
+      </p>
+      <p>
+        To create the windchime effect, I utilized the physics library rapier.js. This allowed me to create a gravitational pull on the letters leading for them to fall in a natural way.
+        I added anchor spheres out of the view of the camera and attached a thin rope to each letter. Carefully adjusting the rope length and attachement to the letter to allow them to 
+        stand up straight and not hang at too much of an angle. This was a tough aspect so I used Leva to give me a GUI to adjust the rope attachement points in realtime to get the perfect
+        position on each letter. 
+      </p>
+      <p>
+        For the mouse interaction, I created an invisible sphere mesh that acts also as a collider object that follows the position of the mouse. when you move the mouse through the letters
+        at the z-axis of 0, the sphere will bump into the letter, causing it to swing and move around in a natural way. 
+      </p>
+      <p>
+        I added some fake wind to keep the scene "alive" and not static when the letters are not being interacted with. I added the sound for the chime effect using the HTML audio API. 
+        I set a frequency for each letter and when the letters collide with each other, the letter will play the sound associated with it. The scene itself was a fun aspect to create. 
+        I utilized soft shadows and added a plane behind the letters to give the scene a bit more depth and realism. 
+      </p>
+      <p>This was a wonderful project to work on and highly recommend checking out the website and working with Jeff and his team for any of your design and developement needs!</p>
+      <p className="text-center font-bold text-red-400">
+        This project will be live soon and I will update the URL.
+      </p>
+        
+      {" "}
+    </div>
+    ),
+  },
+  {
+    id: 2, 
+    href: "#",
     title: "AUW - Listening Experience",
     description: "Working with Jeff, the founder and CEO of AUW we built a listening experience for the artist Lou Phelps.",
     thumbnail: auwSound,
     images: [reel("/videos/auw-listening.mp4")],
-    stack: ["Nextjs", "React", "Tailwind", "Framer Motion", "ffmpeg"],
+    stack: ["Nextjs", "React", "Tailwind", "Framer Motion", "ffmpeg", "GSAP"],
     client: "AUW",
     clientBlurb: "Built for the creative agency out of NYC, ",
     slug: "auw",
