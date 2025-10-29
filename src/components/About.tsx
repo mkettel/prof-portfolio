@@ -75,21 +75,15 @@ export default function About() {
           and a connoisseur of awesome design. Welcome!
         </Paragraph>
         <Paragraph className=" mt-4 dark:text-zinc-400">
-          Since the early days of my journey, I&apos;ve been captivated by the
-          art of crafting exceptional digital experiences. As a developer, I
-          thrive on turning lines of code into functional and elegant solutions to problems that we all face in everyday life.
+          I sort of stumbled into this world of web development after working in the hospital for awhile. I have always had ideas I have wanted to build but just was not sure 
+          of the medium I wanted to build them in. I began by building simple websites to help me at my job, which then turned into a deep interest and desire to keep learning
+          and building more interesting and complex projects. I plan to continue to grow my skills as a developer in this never ending world of tech and try to bring a little 
+          touch of the human element to the projects I build. 
         </Paragraph>
         <Paragraph className=" mt-4 dark:text-zinc-400">
-          What sets me apart is my unwavering appreciation for learning. No matter
-          the topic or task, I approach it with an open mind and a willingness to
-          grow. This mindset has exposed me to a wide array of technologies and
-          methodologies, allowing me to tackle any challenge with confidence and excitement.
-        </Paragraph>
-        <Paragraph className=" mt-4 dark:text-zinc-400">
-          Through this website, I aim to share my insights, experiences, and
-          creations with you. Whether you&apos;re a fellow developer seeking
-          solutions, a fellow adventurer in search of inspiration, or a rando who
-          stumbled upon this, there&apos;s something here for you.
+          As I grow as a developer, I find that I am most interested in unique experiences driven by the desire to try something new. I love working with passionate designers and 
+          creatives that have a vision and want to see it come to fruition. I hope that you enjoy some of my projects I have shared here, and don&apos;t hesitate to reach out and say
+          hello!
         </Paragraph>
         <Paragraph className=" mt-4 dark:text-zinc-400">
           Thank you for stopping by. I hope you enjoy your stay!

@@ -26,7 +26,7 @@ export default function Home() {
       <Heading className="font-black dark:text-white">Howdy! I&apos;m Matt</Heading>
       <HeaderParagraph className="max-w-xl mt-4 dark:text-zinc-400">
         I&apos;m a developer that loves{" "}
-        <Highlight className="dark:text-black dark:rounded-sm">building websites and random other applications</Highlight> with the hope that people enjoy them and find them useful.
+        <Highlight className="dark:text-black dark:rounded-sm">building websites, experiences, and experiments</Highlight> that hopefully people find useful or at least fun to look at.
       </HeaderParagraph>
       <Heading
         as="h2"
