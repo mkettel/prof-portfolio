@@ -38,7 +38,7 @@ export const Products = () => {
                 className="rounded-md"
               />
               <div className="flex flex-col justify-between">
-                <div>
+                <div className="">
                   <Heading
                     as="h4"
                     className="font-black text-lg md:text-lg lg:text-lg dark:text-white"

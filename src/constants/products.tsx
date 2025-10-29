@@ -19,6 +19,9 @@ import optikalConduction from "public/images/optikal-conduction.png";
 import sjHome from "public/images/sj-home.png"
 import sjPageOne from "public/images/sj-page-1.png"
 import sjPageLast from "public/images/sj-page-last.png"
+import pxlagencyHome from "public/images/pxl-thumb.png";
+import pxlagencyvideo from "public/images/pxl-2.png";
+import pxlcontact from "public/images/pxl-contact.png";
 
 export const products = [
   {
@@ -101,6 +104,35 @@ export const products = [
   },
   {
     id: 3, 
+    href: "https://www.pxlagency.com/",
+    title: "PXL Agency",
+    description:
+      "Regularly updated, enhanced and maintained our agency website while working at PXL.",
+    thumbnail: pxlagencyHome,
+    images: [pxlagencyvideo, pxlcontact],  
+    stack: ["Javascript", "Ember.js", "SCSS", "GSAP"],
+    client: "PXL Agency",
+    clientBlurb: "Made for and with the wonderful team at",
+    slug: "pxlagency",
+    content: (
+      <div>
+        <p>
+          While working at PXL Agency, I was responsible for regularly updating, enhancing and maintaining our agency website. 
+          This included adding new features, fixing bugs, and ensuring the website was up to date with the latest industry trends. This included rebuilding the 
+          homepage introducing the GSAP-based scrolltrigger image carousel. This effect makes it look as if the page has stopped scrolling vertically and is instead 
+          scrolling horizontally through the images. 
+        </p>
+        <p>
+          Ember.js was used to build the website, and SCSS was used for styling. Everything was built from scratch and I was responsible for the entire development process.
+          I would work with our wonderful designer and the rest of the team to scope out new features and enhancements to the website. We had a smooth workflow which allowed 
+          for quick iterations and deployments from staging to production.
+        </p>
+        {" "}
+      </div>
+    ),
+  },
+  {
+    id: 4, 
     href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     title: "LookBook",
     description:
@@ -137,7 +169,7 @@ export const products = [
     ),
   },  
   {
-    id: 4, 
+    id: 5, 
     href: "https://thumbnail-generator-dev.pxlagency.com/",
     title: "Thumbnail Generator",
     description:
