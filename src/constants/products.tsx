@@ -108,7 +108,7 @@ export const products = [
   {
     id: 3, 
     href: "https://www.dreamworks.com/",
-    title: "DreamWorks",
+    title: "DreamWorks Animation",
     description:
       "International website for the popular children's tv show Gabby's Dollhouse.",
     thumbnail: dreamworks,
@@ -120,11 +120,11 @@ export const products = [
     content: (
       <div>
         <p>
-          While working at PXL Agency, I was responsible for regularly updating, enhancing and maintaining DreamWorks Animation's international website. 
+          While working at PXL Agency, I was responsible for regularly updating, enhancing and maintaining DreamWorks Animation&apos;s international website.
         </p>
         <p>
           Working with our designer, Orlando, we would build out the pages when a new movie would come out. We built out pages such as: The Wild Robot, Kung Fu Panda, How to Train Your Dragon,
-          Gabby's Dollhouse, Bad Guys, and more. I would update other pages to keep content, dates, and assets up to date. To do this we mainly used HTML, SCSS, PHP, and good ol fashioned HTML.
+          Gabby&apos;s Dollhouse, Bad Guys, and more. I would update other pages to keep content, dates, and assets up to date. To do this we mainly used HTML, SCSS, PHP, and good ol fashioned HTML.
         </p>
         {" "}
       </div>

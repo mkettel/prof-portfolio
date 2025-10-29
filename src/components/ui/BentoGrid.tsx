@@ -40,17 +40,19 @@ const MediaRenderer = ({
   const poster = isMediaItem(media) && media.poster ? getMediaSrc(media.poster) : undefined;
 
   useEffect(() => {
+    const videoElement = videoRef.current;
+
     // Auto-play reels when they come into view
-    if (type === 'reel' && videoRef.current) {
-      videoRef.current.play().catch(() => {
+    if (type === 'reel' && videoElement) {
+      videoElement.play().catch(() => {
         // Silently handle autoplay restrictions
       });
     }
 
     // Pause video when component unmounts
     return () => {
-      if (videoRef.current) {
-        videoRef.current.pause();
+      if (videoElement) {
+        videoElement.pause();
       }
     };
   }, [type]);

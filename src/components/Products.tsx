@@ -31,7 +31,7 @@ export const Products = () => {
               className="group hover:translate-x-1 ease-in flex p-4 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 dark:hover:bg-zinc-800 rounded-2xl transition duration-200"
             >
               <Image
-                src={product.thumbnail}
+                src={'src' in product.thumbnail ? product.thumbnail.src : product.thumbnail}
                 alt="thumbnail"
                 height="200"
                 width="200"

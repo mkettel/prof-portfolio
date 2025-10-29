@@ -1,5 +1,5 @@
 "use client";
-import { Product } from "@/types/products";
+import { Product, MediaItem } from "@/types/products";
 import Image, { StaticImageData } from "next/image";
 import React, { useState, useEffect } from "react";
 import { Heading } from "./Heading";
@@ -12,10 +12,10 @@ import BentoGrid from "./ui/BentoGrid";
 
 
 export const SingleProduct = ({ product }: { product: Product }) => {
-  const [activeImage, setActiveImage] = useState<StaticImageData | string>(
+  const [activeImage, setActiveImage] = useState<StaticImageData | string | MediaItem>(
     product.thumbnail
   );
-  const [thumbnails, setThumbnails] = useState<(StaticImageData | string)[]>(product.images);
+  const [thumbnails, setThumbnails] = useState<(StaticImageData | string | MediaItem)[]>(product.images);
 
   const getSlugFromId = (id: number) => {
     // in products find the id that matches the id passed
@@ -42,10 +42,10 @@ export const SingleProduct = ({ product }: { product: Product }) => {
    * 
    */
 
-  const handleImageSwap = (image: StaticImageData | string) => {
+  const handleImageSwap = (image: StaticImageData | string | MediaItem) => {
     setActiveImage(image);
     setThumbnails(prevThumbnails => {
-      const newThumbnails = prevThumbnails.filter(thumb => thumb !== image); 
+      const newThumbnails = prevThumbnails.filter(thumb => thumb !== image);
       return [...newThumbnails, activeImage];
     });
   };
