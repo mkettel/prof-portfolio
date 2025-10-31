@@ -88,12 +88,12 @@ export const products = [
       <p>
         Working with Jeff for the redesign of his agency website, we wanted to create a creative and engaging footer that would stand out. 
         We decided to go with a 3D footer displaying the letters of the brand that act as windchimes that blow in the wind or upon your mouse moving through the letters.
-        We created the 3D letters in <strong className="text-white">Blender</strong> using the appropriate font for the brand. I exported the letters as a <strong className="text-white">GLTF</strong> file, importing them as a <strong className="text-white">React Three Fiber</strong> component.
+        We created the 3D letters in <strong className="dark:text-white text-neutral-900 font-semibold">Blender</strong> using the appropriate font for the brand. I exported the letters as a <strong className="dark:text-white text-neutral-900 font-semibold">GLTF</strong> file, importing them as a <strong className="dark:text-white text-neutral-900 font-semibold">React Three Fiber</strong> component.
       </p>
       <p>
-        To create the windchime effect, I utilized the physics library <strong className="text-white">rapier.js</strong>. This allowed me to create a gravitational pull on the letters leading for them to fall in a natural way.
+        To create the windchime effect, I utilized the physics library <strong className="dark:text-white text-neutral-900 font-semibold">rapier.js</strong>. This allowed me to create a gravitational pull on the letters leading for them to fall in a natural way.
         I added anchor spheres out of the view of the camera and attached a thin rope to each letter. Carefully adjusting the rope length and attachement to the letter to allow them to 
-        stand up straight and not hang at too much of an angle. This was a tough aspect so I used <strong className="text-white">Leva</strong> to give me a GUI to adjust the rope attachement points in realtime to get the perfect
+        stand up straight and not hang at too much of an angle. This was a tough aspect so I used <strong className="dark:text-white text-neutral-900 font-semibold">Leva</strong> to give me a GUI to adjust the rope attachement points in realtime to get the perfect
         position on each letter. 
       </p>
       <p>
@@ -101,9 +101,9 @@ export const products = [
         at the z-axis of 0, the sphere will bump into the letter, causing it to swing and move around in a natural way. 
       </p>
       <p>
-        I added some fake wind to keep the scene feeling dynamic and not static when the letters are not being interacted with. I added the sound for the chime effect using the <strong className="text-white">HTML Audio API</strong>. 
+        I added some fake wind to keep the scene feeling dynamic and not static when the letters are not being interacted with. I added the sound for the chime effect using the <strong className="dark:text-white text-neutral-900 font-semibold">HTML Audio API</strong>. 
         I set a frequency for each letter and when the letters collide with each other, the letter will play the sound associated with it. The scene itself was a fun aspect to create. 
-        I utilized <strong className="text-white">soft shadows</strong> and added a plane behind the letters to give the scene a bit more depth and realism. 
+        I utilized <strong className="dark:text-white text-neutral-900 font-semibold">soft shadows</strong> and added a plane behind the letters to give the scene a bit more depth and realism. 
       </p>
       <p>This was a wonderful project to work on and highly recommend checking out the website and working with Jeff and his team for any of your design and developement needs!</p>
       <p className="text-center font-bold text-red-400">
@@ -133,17 +133,17 @@ export const products = [
         system that preserves Lucas&apos;s high-fidelity 3D renders while enabling smooth, interactive camera movements.
       </p>
       <p>
-        I engineered a custom playback system using 280 <strong className="text-white">WebP</strong>-compressed frames organized into six navigable sequences
-        (wide shot, left/right record views, and transitions between them). Using <strong className="text-white">GSAP</strong> for interpolation and <strong className="text-white">Canvas API</strong>
+        I engineered a custom playback system using 280 <strong className="dark:text-white text-neutral-900 font-semibold">WebP</strong>-compressed frames organized into six navigable sequences
+        (wide shot, left/right record views, and transitions between them). Using <strong className="dark:text-white text-neutral-900 font-semibold">GSAP</strong> for interpolation and <strong className="dark:text-white text-neutral-900 font-semibold">Canvas API</strong>
         for rendering, the system provides fluid 30fps-like camera movements between three interactive viewpoints.
         I implemented progressive loading with priority frames to ensure instant interaction while remaining assets
         load in the background.
       </p>
       <p>
-        The audio system is built on the <strong className="text-white">Web Audio API</strong> as a dual-deck DJ interface with independent playback controls,
+        The audio system is built on the <strong className="dark:text-white text-neutral-900 font-semibold">Web Audio API</strong> as a dual-deck DJ interface with independent playback controls,
         queue management, and intelligent song transitions. Each deck features a custom waveform visualizer with
-        scrubbing capability and a real-time frequency analyzer that displays <strong className="text-white">FFT</strong> data when audio is playing. The
-        crossfader uses <strong className="text-white">gain node</strong> routing to blend between decks, creating an authentic DJ mixing experience.
+        scrubbing capability and a real-time frequency analyzer that displays <strong className="dark:text-white text-neutral-900 font-semibold">FFT</strong> data when audio is playing. The
+        crossfader uses <strong className="dark:text-white text-neutral-900 font-semibold">gain node</strong> routing to blend between decks, creating an authentic DJ mixing experience.
       </p>
       <p>
         This project presented unique challenges: maintaining ultra-high visual quality in a web environment,
@@ -178,7 +178,7 @@ export const products = [
         </p>
         <p>
           Working with our designer, Orlando, we would build out the pages when a new movie would come out. We built out pages such as: The Wild Robot, Kung Fu Panda, How to Train Your Dragon,
-          Gabby&apos;s Dollhouse, Bad Guys, and more. I would update other pages to keep content, dates, and assets up to date. To do this we mainly used <strong className="text-white">HTML</strong>, <strong className="text-white">SCSS</strong>, <strong className="text-white">PHP</strong>, and good ol fashioned HTML.
+          Gabby&apos;s Dollhouse, Bad Guys, and more. I would update other pages to keep content, dates, and assets up to date. To do this we mainly used <strong className="dark:text-white text-neutral-900 font-semibold">HTML</strong>, <strong className="dark:text-white text-neutral-900 font-semibold">SCSS</strong>, <strong className="dark:text-white text-neutral-900 font-semibold">PHP</strong>, and good ol fashioned HTML.
         </p>
         {" "}
       </div>
@@ -199,9 +199,9 @@ export const products = [
     content: (
       <div>
         <p>
-        Originally started as an experiment to explore the implementation of <strong className="text-white">AI</strong> tools for targeted use cases, 
-        the goal was to develop a solution that enhances video discoverability. It utilizes a combination of <strong className="text-white">AI</strong> 
-        and <strong className="text-white">machine learning</strong> to analyze the video&apos;s transcript, along with data from the <strong className="text-white">YouTube API</strong>, to create 
+        Originally started as an experiment to explore the implementation of <strong className="dark:text-white text-neutral-900 font-semibold">AI</strong> tools for targeted use cases, 
+        the goal was to develop a solution that enhances video discoverability. It utilizes a combination of <strong className="dark:text-white text-neutral-900 font-semibold">AI</strong> 
+        and <strong className="dark:text-white text-neutral-900 font-semibold">machine learning</strong> to analyze the video&apos;s transcript, along with data from the <strong className="dark:text-white text-neutral-900 font-semibold">YouTube API</strong>, to create 
         optimized content tailored to the user&apos;s needs.
           {" "}
         </p>
@@ -243,11 +243,11 @@ export const products = [
         <p>
           While working at PXL Agency, I was responsible for regularly updating, enhancing and maintaining our agency website. 
           This included adding new features, fixing bugs, and ensuring the website was up to date with the latest industry trends. This included rebuilding the 
-          homepage introducing the <strong className="text-white">GSAP</strong>-based scrolltrigger image carousel. This effect makes it look as if the page has stopped scrolling vertically and is instead 
+          homepage introducing the <strong className="dark:text-white text-neutral-900 font-semibold">GSAP</strong>-based scrolltrigger image carousel. This effect makes it look as if the page has stopped scrolling vertically and is instead 
           scrolling horizontally through the images. 
         </p>
         <p>
-          <strong className="text-white">Ember.js</strong> was used to build the website, and <strong className="text-white">SCSS</strong> was used for styling. Everything was built from scratch and I was responsible for the entire development process.
+          <strong className="dark:text-white text-neutral-900 font-semibold">Ember.js</strong> was used to build the website, and <strong className="dark:text-white text-neutral-900 font-semibold">SCSS</strong> was used for styling. Everything was built from scratch and I was responsible for the entire development process.
           I would work with our wonderful designer and the rest of the team to scope out new features and enhancements to the website. We had a smooth workflow which allowed 
           for quick iterations and deployments from staging to production.
         </p>
@@ -274,12 +274,12 @@ export const products = [
           This project combines meaningful design with technical complexity to create a unique way of sharing memories.
         </p>
         <p>
-          The project is built with <strong className="text-white">React Three Fiber</strong> for rendering the 3D scene and <strong className="text-white">Three.js</strong> for advanced geometry manipulation. 
-          I used the <strong className="text-white">Wigglebones</strong> library to integrate a skeleton system into the page meshes, enabling smooth bending animations as the pages turn.
+          The project is built with <strong className="dark:text-white text-neutral-900 font-semibold">React Three Fiber</strong> for rendering the 3D scene and <strong className="dark:text-white text-neutral-900 font-semibold">Three.js</strong> for advanced geometry manipulation. 
+          I used the <strong className="dark:text-white text-neutral-900 font-semibold">Wigglebones</strong> library to integrate a skeleton system into the page meshes, enabling smooth bending animations as the pages turn.
           Each page mesh is skinned with bones, and vertex weights are calculated dynamically to ensure natural deformation during animations.
         </p>
         <p>
-          Textures are applied using <strong className="text-white">alpha maps</strong> for detailed, glossy reflections, adding realism to the front and back covers. 
+          Textures are applied using <strong className="dark:text-white text-neutral-900 font-semibold">alpha maps</strong> for detailed, glossy reflections, adding realism to the front and back covers. 
           The project also employs custom shaders and materials for the pages, combining image textures with emissive highlights to enhance interactivity and visual appeal.
         </p>
         <p>
@@ -314,18 +314,18 @@ export const products = [
         </p>
         <p>
         The first step was finding a 3D model of a turntable because, let&apos;s be honest, modeling one myself would&apos;ve taken ages! 
-        I found a free one, converted it from <strong className="text-white">GLTF</strong> to a <strong className="text-white">React Three Fiber</strong> component, and hit the ground running.
+        I found a free one, converted it from <strong className="dark:text-white text-neutral-900 font-semibold">GLTF</strong> to a <strong className="dark:text-white text-neutral-900 font-semibold">React Three Fiber</strong> component, and hit the ground running.
         {" "}
         </p>
         <p>
         The goal was simple: give people a cool spot to RSVP. I built a modal that connected to an email service so I&apos;d get notified when 
-        someone RSVP&apos;d. With the core functionality in place, it was time to crank up the vibe. I added a <strong className="text-white">custom shader</strong> for the background, 
+        someone RSVP&apos;d. With the core functionality in place, it was time to crank up the vibe. I added a <strong className="dark:text-white text-neutral-900 font-semibold">custom shader</strong> for the background, 
         wrapping the scene in a giant sphere with a neon, color-changing atmosphere, and threw in some camera controls tied to mouse movement 
         for a bit of interactivity.
         {" "}
         </p>
         <p>
-        Of course, a 3D turntable wouldn&apos;t be complete without music, so I rigged it to play a track from <strong className="text-white">YouTube</strong> when the play button was pressed.
+        Of course, a 3D turntable wouldn&apos;t be complete without music, so I rigged it to play a track from <strong className="dark:text-white text-neutral-900 font-semibold">YouTube</strong> when the play button was pressed.
         {" "}
         </p>
         <p>
@@ -353,7 +353,7 @@ export const products = [
       <div>
         <p>
         As the lead on the frontend development team, I was responsible for building the international website for the popular 
-        children&apos;s show Gabby&apos;s Dollhouse. The site was developed using <strong className="text-white">Vue.js</strong> for the frontend, integrated with a <strong className="text-white">PHP</strong>-based 
+        children&apos;s show Gabby&apos;s Dollhouse. The site was developed using <strong className="dark:text-white text-neutral-900 font-semibold">Vue.js</strong> for the frontend, integrated with a <strong className="dark:text-white text-neutral-900 font-semibold">PHP</strong>-based 
         CMS on the backend to dynamically serve content. The vibrant and playful design of the site made the build especially enjoyable. {" "}
         </p>
         <p>I worked closely with design to build out each of the components that we used for every page of the website. We developed the component library to allow 
@@ -389,7 +389,7 @@ export const products = [
         user-friendly, which inspired me to create this modern solution.{" "}
         </p>
         <p>
-        Built with <strong className="text-white">Next.js</strong>, <strong className="text-white">Tailwind CSS</strong>, <strong className="text-white">Framer Motion</strong>, <strong className="text-white">Drizzle ORM</strong>, and <strong className="text-white">MySQL</strong>, Oravai is engineered to be both performant and easy to use. 
+        Built with <strong className="dark:text-white text-neutral-900 font-semibold">Next.js</strong>, <strong className="dark:text-white text-neutral-900 font-semibold">Tailwind CSS</strong>, <strong className="dark:text-white text-neutral-900 font-semibold">Framer Motion</strong>, <strong className="dark:text-white text-neutral-900 font-semibold">Drizzle ORM</strong>, and <strong className="dark:text-white text-neutral-900 font-semibold">MySQL</strong>, Oravai is engineered to be both performant and easy to use. 
         I&apos;ve been working closely with medical professionals to ensure that the tool aligns with their real-world needs, prioritizing usability 
         and functionality. A rewarding part of this process has been designing the user experience from the perspective of someone using it in 
         high-stress situations, where quick access to the right information is critical. Striking a balance between intuitive design and seamless 
@@ -420,12 +420,12 @@ export const products = [
           {" "}
         </p>
         <p>
-        Using a combination of <strong className="text-white">Sharp</strong> and <strong className="text-white">Canvas</strong>, users can overlay PNG assets and customize various features 
+        Using a combination of <strong className="dark:text-white text-neutral-900 font-semibold">Sharp</strong> and <strong className="dark:text-white text-neutral-900 font-semibold">Canvas</strong>, users can overlay PNG assets and customize various features 
         of the thumbnail according to the segment&apos;s configuration needs. Once finalized, the thumbnail can be 
         uploaded directly to the YouTube channel.
         </p>
         <p>
-        Built with <strong className="text-white">Next.js</strong>, <strong className="text-white">Sharp</strong>, <strong className="text-white">Tailwind</strong>, and <strong className="text-white">Framer Motion</strong>, this tool offers flexibility and responsiveness. 
+        Built with <strong className="dark:text-white text-neutral-900 font-semibold">Next.js</strong>, <strong className="dark:text-white text-neutral-900 font-semibold">Sharp</strong>, <strong className="dark:text-white text-neutral-900 font-semibold">Tailwind</strong>, and <strong className="dark:text-white text-neutral-900 font-semibold">Framer Motion</strong>, this tool offers flexibility and responsiveness. 
         Future plans include integrating AI-driven features to suggest thumbnails or generate additional content to 
         further enhance the tool&apos;s capabilities.
         </p>
