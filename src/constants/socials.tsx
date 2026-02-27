@@ -3,7 +3,7 @@ import {
   IconBrandTwitter,
   IconBrandYoutube,
   IconBrandGithub,
-  IconCircleLetterM
+  IconCircleLetterM,
 } from "@tabler/icons-react";
 
 export const socials = [
@@ -24,7 +24,7 @@ export const socials = [
   },
   {
     href: "https://www.matthewkettelkamp.com/",
-    label: "3D Portfolio",
+    label: "Old 3D Portfolio",
     icon: IconCircleLetterM,
   },
 ];
