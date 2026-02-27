@@ -94,6 +94,7 @@ export const products = [
       "React",
       "Tailwindcss",
       "Framer Motion",
+      "python",
       "AI",
       "Blender",
       "Three.js",
