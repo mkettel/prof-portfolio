@@ -34,14 +34,179 @@ import symhome from "public/images/sym-home.png";
 import symsteroids from "public/images/sym-stero.png";
 import symmolecules from "public/images/sym-molecules.png";
 import sympractices from "public/images/sym-practice.png";
+import coatiDashboard from "public/images/coati-stats.png";
+import coatiAudience from "public/images/coati-audience.png";
+import coatiPages from "public/images/coati-pages.png";
+import smilesHome from "public/images/smiles-home.png";
+import smilesGallery from "public/images/smiles-gallery.png";
+import smilesAdmin from "public/images/smiles-admin.png";
+import gopherHome from "public/images/gopher-home.png";
+import gopherCourses from "public/images/gopher-courses.png";
+import gopherRound from "public/images/gopher-round.png";
+import gopherSignup from "public/images/gopher-signup.png";
 
 // Helper to create MediaItems with proper typing
 const reel = (src: string): MediaItem => ({ type: "reel", src });
 const video = (src: string): MediaItem => ({ type: "video", src });
 
 export const products = [
+  // {
+  //   id: 1,
+  //   href: "null - mobile app",
+  //   title: "Mokkí",
+  //   description:
+  //     "Mobile app made for Ski Leases, time shares, group vacations, retreats, and other gatherings to help manage the logistics of the trip.",
+  //   thumbnail: symhome,
+  //   images: [symsteroids, symmolecules, sympractices],
+  //   stack: [
+  //     "Nextjs",
+  //     "React",
+  //     "Tailwindcss",
+  //     "Framer Motion",
+  //     "AI",
+  //     "Three.js",
+  //   ],
+  //   client: "me",
+  //   clientBlurb: "Made for the world by",
+  //   slug: "mokki",
+  //   content: (
+  //     <div>
+  //       <p>
+  //         Back in college, I loved organic chemistry because of how spatial and
+  //         visual it was. However, that also meant it was always difficult to
+  //         learn many of the concepts. I had thought back then that it would be
+  //         great to have a way to visualize and interact with the concepts in a
+  //         more engaging way. Sitting in the back of an inorganic chemistry class
+  //         attempting to learn symmetry elements was very frustrating and thus
+  //         the idea for Symmetria was born.{" "}
+  //       </p>
+  //       <p>
+  //         This is another ongoing project for me. I plan to add more and more
+  //         concepts, and quizzes to help solidify the platform. Check it out and
+  //         if you have any suggestions, bugs, or feature requests, please let me
+  //         know!
+  //       </p>{" "}
+  //     </div>
+  //   ),
+  // },
+  // {
+  //   id: 1,
+  //   href: "https://gopher-virid.vercel.app/",
+  //   title: "Pocket Golpher",
+  //   description:
+  //     "My own custom golf round tracking application to get all of the benefit of other paid applications without the cost.",
+  //   thumbnail: gopherHome,
+  //   images: [gopherCourses, gopherRound, gopherSignup],
+  //   stack: [
+  //     "Nextjs",
+  //     "React",
+  //     "Tailwindcss",
+  //     "Framer Motion",
+  //     "AI",
+  //     "Three.js",
+  //   ],
+  //   client: "me",
+  //   clientBlurb: "Made for the world by",
+  //   slug: "pocket-gopher",
+  //   content: (
+  //     <div>
+  //       <p>
+  //         Back in college, I loved organic chemistry because of how spatial and
+  //         visual it was. However, that also meant it was always difficult to
+  //         learn many of the concepts. I had thought back then that it would be
+  //         great to have a way to visualize and interact with the concepts in a
+  //         more engaging way. Sitting in the back of an inorganic chemistry class
+  //         attempting to learn symmetry elements was very frustrating and thus
+  //         the idea for Symmetria was born.{" "}
+  //       </p>
+  //       <p>
+  //         This is another ongoing project for me. I plan to add more and more
+  //         concepts, and quizzes to help solidify the platform. Check it out and
+  //         if you have any suggestions, bugs, or feature requests, please let me
+  //         know!
+  //       </p>{" "}
+  //     </div>
+  //   ),
+  // },
+  {
+    id: 2,
+    href: "https://www.ssmilesdental.com/",
+    title: "Southern Smiles Dental",
+    description:
+      "A modernwebsite for a dental practice based in Phoenix, Arizona.",
+    thumbnail: smilesHome,
+    images: [smilesGallery, smilesAdmin],
+    stack: [
+      "Nextjs",
+      "React",
+      "Tailwindcss",
+      "Framer Motion",
+      "AI",
+      "Three.js",
+    ],
+    client: "me",
+    clientBlurb: "Made for the world by",
+    slug: "southern-smiles-dental",
+    content: (
+      <div>
+        <p>
+          I got approached by a dentist to convert his old Drupal-based website
+          into a modern website where it's easy to add editing functionality
+          between different pages, versus using an old and not user-friendly
+          Drupal admin panel. I used a color palette based off of his logo he
+          had already, and used my typical stack of index.js: Tailwind,
+          frame-remotions, superbase, et cetera.{" "}
+        </p>
+        <p>
+          This site is optimized for SEO for dental practices and has easy
+          access to update all different pages and components from the admin
+          side.
+        </p>{" "}
+      </div>
+    ),
+  },
   {
     id: 1,
+    href: "https://coati.vercel.app",
+    title: "Coati",
+    description:
+      "My own personal analytics tracking tool that I use to track all of my own websites and client projects that are interested in using it.",
+    thumbnail: reel("/videos/coati-home.mp4"),
+    images: [coatiDashboard, coatiAudience, coatiPages],
+    stack: [
+      "Nextjs",
+      "React",
+      "Tailwindcss",
+      "Framer Motion",
+      "AI",
+      "Three.js",
+    ],
+    client: "me",
+    clientBlurb: "Made for the world by",
+    slug: "coati",
+    content: (
+      <div>
+        <p>
+          As I've been making apps, I've been using Vercel Analytics just on the
+          free platform, which does not give you much insight. I really don't
+          like Google Analytics and other analytics such as Matomo's datafast,
+          which cost money. I figured it'd be nice to just make my own version
+          of an analytics tracking platform to be able to track: - pages and
+          conversion - where people are coming from - set goals to be able to
+          track what pages people move to all while keeping people anonymous, so
+          no actual data is being stored about the user and tied to that user.
+        </p>
+        <p>
+          This project is ever growing, like all my others, and we'll be adding
+          new features as new needs and desires come up. If you would like to
+          check it out, feel free to add your site. You just add your script at
+          the script tag in the root of your project.
+        </p>{" "}
+      </div>
+    ),
+  },
+  {
+    id: 2,
     href: "https://symmetriachem.com/",
     title: "Symmetria",
     description: "3D general and organic chemistry learning platform.",
@@ -82,7 +247,7 @@ export const products = [
     ),
   },
   {
-    id: 2,
+    id: 3,
     href: "https://opti-ecg.com/",
     title: "Opti",
     description:
@@ -144,7 +309,7 @@ export const products = [
     ),
   },
   {
-    id: 3,
+    id: 4,
     href: "#",
     title: "AUW - 3D Footer",
     description: "A creative 3D footer for the redesign of the AUW website.",
@@ -227,7 +392,7 @@ export const products = [
     ),
   },
   {
-    id: 4,
+    id: 5,
     href: "#",
     title: "AUW - Listening Experience",
     description:
@@ -300,7 +465,7 @@ export const products = [
     ),
   },
   {
-    id: 5,
+    id: 6,
     href: "https://www.dreamworks.com/",
     title: "DreamWorks Animation",
     description:
@@ -345,7 +510,7 @@ export const products = [
     ),
   },
   {
-    id: 6,
+    id: 7,
     href: "https://chapter-gen.vercel.app/",
     title: "ChapGen",
     description:
@@ -412,7 +577,7 @@ export const products = [
     ),
   },
   {
-    id: 7,
+    id: 8,
     href: "https://www.pxlagency.com/",
     title: "PXL Agency",
     description:
@@ -461,7 +626,7 @@ export const products = [
     ),
   },
   {
-    id: 8,
+    id: 9,
     href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     title: "LookBook",
     description:
@@ -530,7 +695,7 @@ export const products = [
     ),
   },
   {
-    id: 9,
+    id: 10,
     href: "https://dj-one.vercel.app/",
     title: "DJ Invite",
     description: "A fun custom party invite I made for a friends' DJ event",
@@ -598,7 +763,7 @@ export const products = [
     ),
   },
   {
-    id: 10,
+    id: 11,
     href: "https://www.gabbysdollhouse.com/",
     title: "Gabby's Dollhouse",
     description:
@@ -647,7 +812,7 @@ export const products = [
     ),
   },
   {
-    id: 11,
+    id: 12,
     href: "https://oravai-app.vercel.app/",
     title: "Oravai",
     description:
@@ -712,7 +877,7 @@ export const products = [
     ),
   },
   {
-    id: 12,
+    id: 13,
     href: "https://thumbnail-generator-dev.pxlagency.com/",
     title: "Thumbnail Generator",
     description:

@@ -1,14 +1,15 @@
 export const timeline = [
   {
-    company: "PXL Agency",
-    title: "Web Developer",
-    date: "2023 - Present",
-    description: "Building websites, web apps and mobile apps for clients in entertainment to finance",
+    company: "Resolv",
+    title: "Software Engineer",
+    date: "2025 - Present",
+    description:
+      "Building an AI agency that automates the rebate process for HVAC companies",
     responsibilities: [
-      "Developed two AI-powered tools that helps optimize YouTube channels for growth",
-      "Handled all front-end code and tasks for an international website build for a major entertainment client",
-      "Contributed to over 15 different projects in the last year",
-      "Work with the sales team to help scope out new projects and provide technical expertise",
+      "Designed and shipped agentic workflows that automate the end-to-end rebate process, eliminating manual paperwork and back-and-forth",
+      "Drove the product from $0 to $60,000 MRR by building reliable, production-grade AI systems",
+      "Led AI engineering across the stack, from LLM-powered automation and tool orchestration to the web app that ties it together",
+      "Worked directly with HVAC companies to understand their workflows and turn them into automated, scalable software",
     ],
   },
   {
@@ -27,7 +28,8 @@ export const timeline = [
     company: "Vail Health",
     title: "Senior Audio/Visual Technician",
     date: "2019 - 2021",
-    description: "Provided hands-on technical integration and support for audio/visual systems within the operating rooms",
+    description:
+      "Provided hands-on technical integration and support for audio/visual systems within the operating rooms",
     responsibilities: [
       "Developed a web application to help staff understand and use the technology in the operating rooms leading to a reduction in support calls and operating room downtime/delays",
       "Operated under strict HIPAA guidelines to ensure patient privacy and data security",
@@ -39,7 +41,8 @@ export const timeline = [
     company: "US Ski & Snowboard",
     title: "Freeride Ski Coach",
     date: "2019 - 2021",
-    description: "Coaching athletes to reach their full potential in the discipline of big mountain freeride skiing",
+    description:
+      "Coaching athletes to reach their full potential in the discipline of big mountain freeride skiing",
     responsibilities: [
       "Improved the iOS operating system to enhance user experience",
       "Developed a new feature that personalizes user interface",
