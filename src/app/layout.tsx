@@ -1,15 +1,14 @@
-"use client";
 import { Sidebar } from "@/components/Sidebar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
-import { ThemeProvider } from "next-themes";
+import { Providers } from "@/components/Providers";
 import { Analytics } from "@vercel/analytics/react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Metadata } from "next";
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Matt Kettelkamp | Developer, Skier, and Person",
     template: "%s | Matt Kettelkamp Portfolio Website",
@@ -78,7 +77,7 @@ export default function RootLayout({
           "flex antialiased h-screen overflow-hidden bg-gray-100 dark:bg-zinc-900 duration-300 transition-colors",
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <Providers>
           <Sidebar />
           <div className="lg:pl-2 lg:pt-2 bg-white dark:bg-zinc-900 duration-300 transition-colors flex-1 overflow-y-auto">
             <div className="flex-1 bg-white dark:bg-zinc-900 duration-300 transition-colors min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 dark:lg:border-neutral-800 overflow-y-auto">
@@ -93,7 +92,7 @@ export default function RootLayout({
             data-site="site_0pnmu78fmvex"
             src="https://coati.vercel.app/p.js"
           ></script>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

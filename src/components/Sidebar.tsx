@@ -33,6 +33,12 @@ export const Sidebar = () => {
               <Navigation setOpen={setOpen} />
             </div>
             <div className="mb-14 md:mb-0" onClick={() => isMobile() && setOpen(false)}>
+              <Link
+                href="/book"
+                className="flex items-center justify-center gap-2 w-full rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-xs font-semibold py-2.5 px-4 mb-3 shadow-lg shadow-zinc-900/20 hover:opacity-90 transition"
+              >
+                Book a free consult
+              </Link>
               <Badge href="/resume" text="Read Resume" />
               <ThemeToggle />
             </div>
