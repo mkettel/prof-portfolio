@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useMotionValue, animate, AnimatePresence, useSpring } from 'framer-motion';
+import { motion, useMotionValue, animate, AnimatePresence, useSpring, type Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Expand, Move } from 'lucide-react';
 import { MediaItem as MediaItemType } from '@/types/products';
 
@@ -87,7 +87,7 @@ const MediaRenderer = ({
   );
 };
 
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -98,7 +98,7 @@ const container = {
   }
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,

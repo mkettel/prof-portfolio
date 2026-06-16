@@ -133,7 +133,7 @@ export const products = [
     href: "https://www.ssmilesdental.com/",
     title: "Southern Smiles Dental",
     description:
-      "A modernwebsite for a dental practice based in Phoenix, Arizona.",
+      "A modern website for a dental practice based in Phoenix, Arizona.",
     thumbnail: smilesHome,
     images: [smilesGallery, smilesAdmin],
     stack: [

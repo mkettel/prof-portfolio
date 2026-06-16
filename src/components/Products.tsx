@@ -65,7 +65,7 @@ export const Products = () => {
       <div className="grid grid-cols-1 gap-4">
         {products.map((product: Product, idx: number) => (
           <motion.div
-            key={product.href}
+            key={product.slug ?? idx}
             initial={{
               opacity: 0,
               x: -50,
@@ -78,7 +78,6 @@ export const Products = () => {
           >
             <Link
               href={product.slug ? `/projects/${product.slug}` : product.href}
-              key={product.href}
               className="group hover:translate-x-1 ease-in flex p-4 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 dark:hover:bg-zinc-800 rounded-2xl transition duration-200"
             >
               <ProductThumbnail thumbnail={product.thumbnail} />
