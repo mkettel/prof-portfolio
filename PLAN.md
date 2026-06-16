@@ -44,55 +44,99 @@ subscription.
 - **Subscription:** consult-first — show plans + "Book a consult" CTA; Stripe
   payment link sent manually after scoping. Self-serve Stripe Customer Portal for
   pause/cancel comes in Phase 2.
-- **Sequencing:** Phase 1 (reposition + booking) ships first; payments in Phase 2.
+- **Sequencing:** Upgrade (Phase 0) → reposition + booking (Phase 1) →
+  payments (Phase 2).
+- **Blend model:** *Lead with the offer, use the portfolio as proof.* Not 50/50 —
+  the creative/3D work stays as the credibility engine behind the services pitch.
+- **Dependency upgrade:** conservative — Next 15 + React 19, keep Tailwind 3.4
+  (defer v4), tailwind-merge 2, eslint 8, TypeScript 5. **Done** (see Phase 0).
 
 ---
 
-## Existing stack (don't fight it)
+## Existing stack (after Phase 0 upgrade)
 
-- Next.js **13.4** App Router, Tailwind 3.3, Framer Motion, MDX blog.
+- Next.js **15.5** App Router, **React 19**, Tailwind **3.4**, Framer Motion 12,
+  MDX 3 blog.
 - **Resend already wired** for the contact form (`src/app/api/contact/route.ts`).
 - Aceternity "sidefolio" template: sidebar nav, constants-driven sections.
 - Reusable components: `Container`, `Heading`, `Paragraph`, `Badge`,
-  `ButtonCTA`, `Sidebar`, `Contact`.
+  `Sidebar`, `Contact`. (`ButtonCTA` is **dead code** — never rendered.)
 - Key files: `src/constants/navlinks.tsx`, `src/constants/products.tsx`,
   `src/app/page.tsx`, `src/components/About.tsx`, `src/app/projects/[slug]/page.tsx`.
 
-Match existing patterns and component usage. No framework upgrade needed.
+Match existing patterns and component usage.
+
+### Gotchas learned during the upgrade
+- Pages export a server `metadata` object; Home/About are `'use client'`.
+- **Root metadata is broken:** `layout.tsx` is `'use client'` and declares
+  `const metadata` (not `export`) → site-wide title/OG never apply. **Fix in
+  Phase 1** (new pages need real metadata anyway, and SEO matters for the pitch).
+- Blog pages are now `'use client'` (React 19 + MDX-in-RSC workaround). `mdxRs`
+  is off; MDX uses the JS loader so remark/rehype plugins actually run.
+- Bare `public/...` / `src/...` imports rely on tsconfig path aliases.
 
 ---
 
-## Phase 1 — Reposition + Booking (build this first)
+## Phase 0 — Dependency upgrade ✅ DONE
 
-1. **`src/app/services/page.tsx` — the service ("money") page.**
-   Sections: the problem → how it works (consult → build → subscription) → the
-   offer + pricing anchors → case studies teaser → "Book a free consult" CTA.
-   Reuse `Container`/`Heading`/`Paragraph`/`Badge`.
+Branch `upgrade/next15-react19`, commit `34cfa22`. Next 13.4 → **15.5.19**,
+React 18 → **19.2.7**; framer-motion 12, R3F 9 / drei 10, tabler-icons 3, MDX 3;
+Tailwind kept at 3.4. Removed unused `@react-three/flex` + dead `ffmpeg`.
+Production build green (16/16 pages); runtime-verified home, project detail,
+blog post, blog index, contact with zero console errors. Full breaking-change
+list is in the commit message.
 
-2. **`src/app/book/page.tsx` — consultation booking.**
-   Cal.com embed via `@calcom/embed-react`, reading `NEXT_PUBLIC_CAL_LINK`. This
-   is the destination of every primary CTA.
+Deferred (non-blocking): Tailwind 4; converting BentoGrid `<img>` → `next/image`;
+Node 22 (a couple sub-deps prefer it; 20.13 works).
 
-3. **Case studies — reframe `src/constants/products.tsx` + the
-   `projects/[slug]` template.**
-   Restructure each entry to lead with **problem → what I built → outcome**.
-   Southern Smiles is the hero ("replaced a fragile 22-spreadsheet system that
-   runs the whole dental practice").
+---
 
-4. **Home reposition — `src/app/page.tsx` + `src/components/About.tsx`.**
-   Hero leads with the offer + a "Book a free consult" button (not just "I'm a
-   developer"). Add a short "what I do" band linking to `/services`.
+## Target information architecture (the blend)
 
-5. **Nav + CTA — `src/constants/navlinks.tsx`, `ButtonCTA.tsx`, `Sidebar.tsx`.**
-   Add "Services" to nav; persistent CTA becomes "Book a free consult" → `/book`.
+| Route | Role | Change |
+|-------|------|--------|
+| `/` Home | **The pitch** — hero leads with the offer + "Book a free consult", then how-it-works band → curated "selected work" (proof) → pricing teaser → CTA | Major reposition |
+| `/services` | **The money page** (most Designjoy-like): problem → consult→build→subscribe → pricing cards → FAQ → CTA | New |
+| `/work` (today's `/projects`) | **The proof** — full showcase stays; top entries reframed to outcomes | Light reframe (+ optional rename) |
+| `/book` | Cal.com embed | New |
+| `/about` | Trust / personality — keep | Keep |
+| `/contact` `/blog` `/resume` `/lounge` | Secondary | Keep |
 
-6. **Pricing as content** — a component on the services page showing build
-   packages + the subscription in plain buyer language. Display only, no payment
-   wiring yet.
+Sidebar nav reorders to **Home · Services · Work · About** with a persistent
+**"Book a free consult"** button at the bottom (replacing the dead `ButtonCTA`).
 
-**Verify:** run the dev server, check the new pages render, CTAs route to
-`/book`, the Cal embed loads (with a placeholder link if no account yet), and the
-site still builds (`npm run build`).
+---
+
+## Phase 1 — Reposition + Booking (build order)
+
+Tasks 1–3 and 5–6 need **no external accounts**; the Cal embed (4) can use a
+placeholder link until the Cal account exists.
+
+1. **Nav + persistent CTA** — `navlinks.tsx` (add Services), `Sidebar.tsx`
+   (add "Book a free consult" Badge → `/book`), delete/repurpose dead
+   `ButtonCTA.tsx`.
+2. **`src/app/services/page.tsx`** — server component **with real `metadata`**:
+   problem → how it works (consult → build → subscription) → offer + pricing
+   anchors → case-study teaser → "Book a free consult" CTA. Reuse
+   `Container`/`Heading`/`Paragraph`/`Badge`.
+3. **`src/components/Pricing.tsx`** — display-only build packages + subscription
+   in plain buyer language. No payment wiring.
+4. **`src/app/book/page.tsx`** — client component, Cal.com embed via
+   `@calcom/embed-react` reading `NEXT_PUBLIC_CAL_LINK` (placeholder default).
+   Destination of every primary CTA. Add dep + `.env` var.
+5. **Home reposition** — `page.tsx` (+ maybe `About.tsx`): hero leads with the
+   offer + "Book a free consult"; add a short "what I do" band linking to
+   `/services`.
+6. **Case-study reframe** — `products.tsx` (+ maybe `types`/`Product.tsx`):
+   lead with **problem → what I built → outcome**. Southern Smiles is the hero
+   ("replaced a fragile 22-spreadsheet system that runs the whole dental
+   practice"). *Decision still open:* extend the data model vs. rewrite prose
+   vs. hero-only.
+7. **Fix root metadata/SEO** — make `layout.tsx` apply site-wide metadata
+   correctly (currently dead). Cheap, high-value for the pitch.
+
+**Verify:** dev server + `npm run build`; new pages render, CTAs route to
+`/book`, Cal embed loads (placeholder ok), zero console errors.
 
 ---
 
