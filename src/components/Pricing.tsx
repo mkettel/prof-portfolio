@@ -118,7 +118,7 @@ export const Pricing = () => {
       </Heading>
       <Paragraph className="text-sm mt-2 max-w-xl dark:text-zinc-400">
         A one-time build to get your tool live. Most clients land on{" "}
-        <span className="font-semibold text-primary dark:text-zinc-200">Custom</span> —
+        <span className="font-semibold text-primary dark:text-zinc-200">Custom</span>,
         a real, multi-role business app.
       </Paragraph>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -134,7 +134,7 @@ export const Pricing = () => {
         </Heading>
         <Paragraph className="text-sm mt-2 max-w-2xl dark:text-zinc-400 font-medium">
           Flat monthly. Unlimited requests, one at a time. Pause or cancel anytime.
-          All async — your app stays live, secure, and always improving.
+          All async. Your app stays live, secure, and always improving.
         </Paragraph>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
           {subscriptions.map((pkg) => (
@@ -144,7 +144,7 @@ export const Pricing = () => {
       </div>
 
       <p className="text-xs text-secondary dark:text-zinc-500 mt-6">
-        Every project starts with a free consult — pricing is confirmed once we&apos;ve
+        Every project starts with a free consult. Pricing is confirmed once we&apos;ve
         scoped the work together.
       </p>
     </div>

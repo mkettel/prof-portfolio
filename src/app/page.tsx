@@ -25,7 +25,7 @@ export default function Home() {
         className="fixed bottom-0 left-0 w-full h-36 bg-gradient-to-t from-white to-transparent dark:from-zinc-900 pointer-events-none"
         style={{ transform: `translateY(${scrollY * 0.1}px)` }}
       />
-      {/* Hero — lead with the offer */}
+      {/* Hero - lead with the offer */}
       <p className="flex items-center gap-1.5 text-sm font-medium text-secondary dark:text-zinc-400 mb-3">
         Hi, I&apos;m Matt 👋
         <IconArrowRight className="h-3.5 w-3.5" />
@@ -39,8 +39,8 @@ export default function Home() {
         <Highlight className="dark:text-black dark:rounded-sm">
           owner-operators who&apos;ve outgrown spreadsheets and duct-taped
           systems
-        </Highlight>{" "}
-        — and I stick around to keep them running.
+        </Highlight>
+        , and I stick around to keep them running.
       </HeaderParagraph>
       <div className="flex flex-wrap items-center gap-3 mt-8">
         <Link

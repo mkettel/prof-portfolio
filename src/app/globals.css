@@ -45,3 +45,27 @@
   .animate-fall {
     animation: fall linear infinite;
   }
+
+/* Slow, shader-like drift for the "How it works" card backgrounds */
+@keyframes aurora {
+  0% {
+    transform: translate3d(-8%, -6%, 0) scale(1.25) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(8%, 6%, 0) scale(1.4) rotate(8deg);
+  }
+  100% {
+    transform: translate3d(-8%, -6%, 0) scale(1.25) rotate(0deg);
+  }
+}
+
+.animate-aurora {
+  animation: aurora 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora {
+    animation: none;
+  }
+}

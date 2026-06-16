@@ -18,7 +18,7 @@ export default function BookPage() {
         Book a free consult
       </Heading>
       <Paragraph className="max-w-xl mb-2 dark:text-zinc-400">
-        A quick, no-pressure call to scope your idea — what the{" "}
+        A quick, no-pressure call to scope your idea. We cover what the{" "}
         <Highlight className="dark:text-black dark:rounded-sm">
           problem is, what to build, and how to start
         </Highlight>

@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const isMediaItem = (thumb: Product["thumbnail"]): thumb is MediaItem =>
   typeof thumb === "object" && thumb !== null && "type" in thumb;
 
-// Uniform thumbnail frame — every card is the same size; media is letterboxed
+// Uniform thumbnail frame - every card is the same size; media is letterboxed
 // (object-contain) inside it so nothing gets cropped.
 const FRAME =
   "relative rounded-md w-[200px] h-[200px] flex-shrink-0 overflow-hidden";

@@ -688,7 +688,7 @@ export const products = [
         </p>
         <p>
           Due to the personal nature of the photos, the project is not publicly
-          available. However, I&apos;d be happy to share a private link—just
+          available. However, I&apos;d be happy to share a private link, just
           shoot me a message!
         </p>
       </div>
@@ -714,7 +714,7 @@ export const products = [
     content: (
       <div>
         <p>
-          One weekend, I decided to challenge myself with a fun project—creating
+          One weekend, I decided to challenge myself with a fun project: creating
           a custom 3D invitation for a friend&apos;s upcoming DJ event. Inspired
           by the playful invitations on Partiful, I wanted to capture that same
           energy but with a twist: incorporating 3D elements.{" "}
@@ -756,7 +756,7 @@ export const products = [
           While I ran out of time before the event to add everything I
           envisioned, I was proud of the result and learned a ton in the
           process. Next time, I&apos;ll definitely spend more time optimizing
-          the model to improve performance—but hey, that&apos;s what projects
+          the model to improve performance, but hey, that&apos;s what projects
           like this are all about!{" "}
         </p>{" "}
       </div>

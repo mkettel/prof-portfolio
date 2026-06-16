@@ -22,9 +22,9 @@ export const socials = [
     label: "Github",
     icon: IconBrandGithub,
   },
-  {
-    href: "https://www.matthewkettelkamp.com/",
-    label: "Old 3D Portfolio",
-    icon: IconCircleLetterM,
-  },
+  // {
+  //   href: "https://www.matthewkettelkamp.com/",
+  //   label: "Old 3D Portfolio",
+  //   icon: IconCircleLetterM,
+  // },
 ];
